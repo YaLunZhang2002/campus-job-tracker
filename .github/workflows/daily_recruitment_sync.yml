@@ -1,0 +1,79 @@
+name: 2027 届秋招全网情报每日自动抓取与看板发布
+
+on:
+  schedule:
+    # 每天北京时间 08:00 运行（UTC 00:00）
+    - cron: '0 0 * * *'
+  workflow_dispatch: # 支持在 GitHub 网页上一键手动点击随时触发
+
+# 赋予写权限以提交更新并部署 GitHub Pages
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  daily-sync:
+    runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Shanghai
+    steps:
+      - name: 检出仓库代码
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 配置 Python 3.11 运行环境
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: 安装依赖包
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: 执行全网多源实时秋招网络抓取
+        run: |
+          python scripts/multi_source_spider.py
+
+      - name: 执行智能分级打分并重新编译看板
+        run: |
+          python scripts/sync_and_rank.py --no-toast
+
+      - name: 发送今日秋招早报至手机微信 (可选)
+        env:
+          PUSH_KEY: ${{ secrets.PUSH_KEY }}
+        run: |
+          python scripts/push_notify.py
+
+      - name: 提交并推送到 GitHub 仓库
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html 秋招每日岗位追踪与投递台账.md data/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 自动巡检: $(date +'%Y-%m-%d %H:%M') 全网秋招增量更新与看板发布" && git push)
+
+      - name: 配置 GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: 上传 GitHub Pages 构建产物
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+  deploy-pages:
+    needs: daily-sync
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 部署到 GitHub Pages 静态网站
+        id: deployment
+        uses: actions/deploy-pages@v4
