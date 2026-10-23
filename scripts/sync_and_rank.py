@@ -1391,7 +1391,8 @@ def generate_html_dashboard(ranked_jobs, tracking_db, removed_ids, featured_jobs
         <p>个人专属画像：郑州大学建筑学专硕 ｜ 核心方向：全行业通识业务池（管培/运营/ToB销售/AI非技术）+ 建筑科技/双碳 ｜ 🕒 <strong>看板编译更新时间：{today_str}</strong></p>
       </div>
       <div class="header-actions">
-        <button class="btn btn-primary" onclick="openWebSearchModal()" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);" title="查看每日自动化网络检索运行机制与源站状态">🌐 每日全网检索 2027 最新秋招</button>
+        <button class="btn btn-secondary" onclick="openNowClawModal()" style="background: linear-gradient(135deg, #059669 0%, #047857 100%); color: white; border: none;" title="牛客 AI 求职助手 11 大能力已装载">🦞 牛客 AI 助手 (11大技能已装载)</button>
+        <button class="btn btn-primary" onclick="openWebSearchModal()"  style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);" title="查看每日自动化网络检索运行机制与源站状态">🌐 每日全网检索 2027 最新秋招</button>
         <button class="btn btn-add" onclick="window.location.reload(true)" title="重新加载本地最新生成的数据">🔄 强制刷新 (F5)</button>
         <button class="btn btn-secondary" onclick="openAddModal()">➕ 录入新岗位</button>
         <button class="btn btn-secondary" onclick="openTrashModal()">🗑️ 回收站 (<span id="trashCount">0</span>)</button>
@@ -1737,6 +1738,29 @@ def generate_html_dashboard(ranked_jobs, tracking_db, removed_ids, featured_jobs
   </div>
 
   <script>
+    function openNowClawModal() {{
+      document.getElementById('nowclawModal').style.display = 'flex';
+    }}
+
+    function copyNowClawPrompt(type) {{
+      if (!currentViewingJob) return;
+      const comp = currentViewingJob.company || '';
+      const pos = (currentViewingJob.positions || []).join('、');
+      let prompt = '';
+      if (type === 'brief') {{
+        prompt = `使用牛客AI求职助手，帮我进行【${{comp}}】面试前公司速查。请基于其近期校招与商业动态，分析核心业务方向、企业风格文化、面试考核偏好与重要避坑提示。`;
+      }} else if (type === 'interview') {{
+        prompt = `使用牛客AI求职助手，针对【${{comp}}】的【${{pos}}】岗位，开启定向模拟面试。结合郑大建筑专硕背景，为我预测5道高频必考核心业务与综合情景面试题，并提供参考答题要点。`;
+      }} else if (type === 'tailor') {{
+        prompt = `使用牛客AI求职助手与简历定制技能，针对【${{comp}}】的【${{pos}}】岗位，深度拆解JD关键词，结合我的背景进行定向简历针对性优化与差距补齐建议。`;
+      }}
+      navigator.clipboard.writeText(prompt).then(() => {{
+        alert(`已成功复制牛客 AI 指令到剪贴板！\n\n直接在 Antigravity 对话框中粘贴发送即可：\n"${{prompt}}"`);
+      }}).catch(() => {{
+        window.prompt('请复制以下指令到对话中使用：', prompt);
+      }});
+    }}
+
     function openWebSearchModal() {{
       document.getElementById('webSearchModal').style.display = 'flex';
     }}
@@ -2684,6 +2708,19 @@ def generate_html_dashboard(ranked_jobs, tracking_db, removed_ids, featured_jobs
           <div class="tag-cloud">${{ats.map(k => `<span class="ats-chip">${{k}}</span>`).join('')}}</div>
         </div>`;
       }}
+
+            html += `<div class="jd-section" style="background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%); border: 1.5px solid #a7f3d0; border-radius: 10px; padding: 14px;">
+        <div class="jd-subtitle" style="color: #065f46; display: flex; align-items: center; justify-content: space-between;">
+          <span>🦞 牛客 AI 专项求职助手能力联动</span>
+          <span style="font-size: 11px; background: #10b981; color: white; padding: 2px 8px; border-radius: 12px;">已装载 v1.1.2</span>
+        </div>
+        <p style="font-size: 12.5px; color: #047857; margin-bottom: 10px; line-height: 1.5;">针对当前【${{job.company}}】与岗位，一键生成 AI 提问指令，随时在对话中调起牛客专属技能：</p>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <button class="btn btn-secondary" style="font-size: 12px; padding: 6px 12px; background: white; border: 1px solid #10b981; color: #065f46;" onclick="copyNowClawPrompt('brief')">🏢 一键复制【面试前公司速查】指令</button>
+          <button class="btn btn-secondary" style="font-size: 12px; padding: 6px 12px; background: white; border: 1px solid #10b981; color: #065f46;" onclick="copyNowClawPrompt('interview')">🎙️ 一键复制【岗前模拟面试】指令</button>
+          <button class="btn btn-secondary" style="font-size: 12px; padding: 6px 12px; background: white; border: 1px solid #10b981; color: #065f46;" onclick="copyNowClawPrompt('tailor')">📝 一键复制【定向简历改写】指令</button>
+        </div>
+      </div>`;
 
       document.getElementById('modalJdContent').innerHTML = html;
       document.getElementById('jdModal').style.display = 'flex';

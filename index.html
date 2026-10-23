@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🎯 秋招情报雷达与全流程作战室 3.9 (2026-10-23 12:13:59)</title>
+  <title>🎯 秋招情报雷达与全流程作战室 3.9 (2026-10-23 16:40:19)</title>
   <style>
     :root {
       --primary: #1e3a8a;
@@ -653,10 +653,11 @@
     <header>
       <div class="header-left">
         <h1>🎯 2026/2027 秋招情报雷达与全流程作战室 3.9</h1>
-        <p>个人专属画像：郑州大学建筑学专硕 ｜ 核心方向：全行业通识业务池（管培/运营/ToB销售/AI非技术）+ 建筑科技/双碳 ｜ 🕒 <strong>看板编译更新时间：2026-10-23 12:13:59</strong></p>
+        <p>个人专属画像：郑州大学建筑学专硕 ｜ 核心方向：全行业通识业务池（管培/运营/ToB销售/AI非技术）+ 建筑科技/双碳 ｜ 🕒 <strong>看板编译更新时间：2026-10-23 16:40:19</strong></p>
       </div>
       <div class="header-actions">
-        <button class="btn btn-primary" onclick="openWebSearchModal()" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);" title="查看每日自动化网络检索运行机制与源站状态">🌐 每日全网检索 2027 最新秋招</button>
+        <button class="btn btn-secondary" onclick="openNowClawModal()" style="background: linear-gradient(135deg, #059669 0%, #047857 100%); color: white; border: none;" title="牛客 AI 求职助手 11 大能力已装载">🦞 牛客 AI 助手 (11大技能已装载)</button>
+        <button class="btn btn-primary" onclick="openWebSearchModal()"  style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);" title="查看每日自动化网络检索运行机制与源站状态">🌐 每日全网检索 2027 最新秋招</button>
         <button class="btn btn-add" onclick="window.location.reload(true)" title="重新加载本地最新生成的数据">🔄 强制刷新 (F5)</button>
         <button class="btn btn-secondary" onclick="openAddModal()">➕ 录入新岗位</button>
         <button class="btn btn-secondary" onclick="openTrashModal()">🗑️ 回收站 (<span id="trashCount">0</span>)</button>
@@ -1002,6 +1003,32 @@
   </div>
 
   <script>
+    function openNowClawModal() {
+      document.getElementById('nowclawModal').style.display = 'flex';
+    }
+
+    function copyNowClawPrompt(type) {
+      if (!currentViewingJob) return;
+      const comp = currentViewingJob.company || '';
+      const pos = (currentViewingJob.positions || []).join('、');
+      let prompt = '';
+      if (type === 'brief') {
+        prompt = `使用牛客AI求职助手，帮我进行【${comp}】面试前公司速查。请基于其近期校招与商业动态，分析核心业务方向、企业风格文化、面试考核偏好与重要避坑提示。`;
+      } else if (type === 'interview') {
+        prompt = `使用牛客AI求职助手，针对【${comp}】的【${pos}】岗位，开启定向模拟面试。结合郑大建筑专硕背景，为我预测5道高频必考核心业务与综合情景面试题，并提供参考答题要点。`;
+      } else if (type === 'tailor') {
+        prompt = `使用牛客AI求职助手与简历定制技能，针对【${comp}】的【${pos}】岗位，深度拆解JD关键词，结合我的背景进行定向简历针对性优化与差距补齐建议。`;
+      }
+      navigator.clipboard.writeText(prompt).then(() => {
+        alert(`已成功复制牛客 AI 指令到剪贴板！
+
+直接在 Antigravity 对话框中粘贴发送即可：
+"${prompt}"`);
+      }).catch(() => {
+        window.prompt('请复制以下指令到对话中使用：', prompt);
+      });
+    }
+
     function openWebSearchModal() {
       document.getElementById('webSearchModal').style.display = 'flex';
     }
@@ -1010,7 +1037,7 @@
     let REMOVED_IDS = new Set([]);
     let currentMainView = 'discovery'; // 'discovery' | 'inbox' | 'tracking'
     const INITIAL_STATUSES = {"中建八局一公司_施工_线下宣讲批": "面试中", "中建三局海外事业部_施工_线下宣讲批": "已淘汰", "高途_新媒体管培生_线下宣讲批": "面试中", "vivo_电商运营经理_校招正式批": "已网申", "新东方教育(郑州)_教师及管培综合岗_线下宣讲批": "已淘汰", "宇通集团_国内营销管培生_2027秋招正式批": "已网申", "蜜雪冰城_品牌营销方向_2027全球校招批": "已网申", "雅迪科技集团_营销管培生_校招批": "已淘汰", "OPPO_市场管培生(电商方向)_2027秋招正式批": "已网申", "三一集团_管理向管培生_2027秋招正式批": "已网申", "理想汽车_销售运营专员(家充业务)_2027秋招正式批": "笔试中", "华润集团_招商运营(上海)_2027秋招正式批": "已网申", "农夫山泉_市场储备_2027秋招正式批": "已网申", "大疆创新_电商培训生(深圳)_2027秋招正式批": "已网申", "九号公司_电商运营专员_2027秋招正式批": "已网申", "九号公司_营销与运营管培生_2026-09-17": "已网申", "宝洁_Customer_Business_Development_Manager_2027秋招正式批": "已淘汰", "宝洁(P&G)_BRM全渠道客户销售与运营管培生_正式批": "已淘汰", "长鑫存储_工程运营(BJ)_2027秋招正式批": "面试中", "吉利汽车_营销管培生_2027秋招正式批": "已网申", "锐捷网络_27秋-AI产品经理(供应链方向)_2027秋招正式批": "已淘汰", "双胞胎集团_建筑工程岗_2027秋招正式批": "已网申", "京东方_销售经理(苏州)_2027秋招正式批": "已网申", "超聚变_销售经理_2027秋招正式批": "已网申", "卫龙_电商中心管培生_2027秋招正式批": "已网申", "小米_新零售校招生(河南)_2027秋招正式批": "已网申", "青岛啤酒_河南销售_2027秋招正式批": "已网申", "中国平安_NS管培生(经营分析)_2027秋招正式批": "已网申", "科大讯飞_电商运营经理(商业分析方向)&电商运营_2027秋招正式批": "已网申", "泡泡玛特_跨境电商运营(美洲区)&零售运营_2027秋招正式批": "已网申", "普度机器人_销售管培生(国内)&数字营销_2027秋招正式批": "已网申", "蔚来_大客户销售&业务运营_2027秋招正式批": "已网申", "快手_行业运营_2027秋招正式批": "已网申", "百威中国_供应链生产物流采购管理培训生_2027秋招正式批": "已网申", "立达中国_管理培训生_2027秋招正式批": "已网申", "特斯拉_助理特斯拉顾问(销售方向-苏州)_2027秋招正式批": "已网申", "戴尔_业务拓展经理(个人消费类产品)_2027秋招正式批": "已网申", "名创优品_商品运营创优生_2027秋招正式批": "已网申", "河南钢铁集团_综合管理与工程技术储备_2027秋招正式批": "已网申", "北森_2027届校招服务管培生_2027秋招正式批": "已网申", "携程_旅游业务培训生(业务运营-郑州)_2027秋招正式批": "已网申", "太古集团_Swire_Management_Programme_2027_2027秋招正式批": "已网申", "爱立信_2027校招Future_Star_销售培训生_2027秋招正式批": "已网申", "金风科技_综合管理管培生_2027秋招正式批": "已网申", "海尔智家_电商管理_2027秋招正式批": "已网申", "得物_商家运营(户外运动)&供应链(网络规划)_2027秋招正式批": "已网申", "腾讯_行业运营_2027秋招正式批": "已网申"};
-    const APPLIED_COMPANIES = new Set(["立达中国", "戴尔", "得物", "卫龙", "京东方", "小米", "农夫山泉", "科大讯飞", "名创优品", "爱立信", "雅迪科技集团", "超聚变", "中国平安", "vivo", "腾讯", "三一集团", "海尔智家", "青岛啤酒", "快手", "宝洁p&g", "特斯拉", "普度机器人", "中建三局海外事业部", "锐捷网络", "中建八局一公司", "oppo", "大疆创新", "吉利汽车", "理想汽车", "蜜雪冰城", "泡泡玛特", "太古集团", "新东方教育郑州", "长鑫存储", "宇通集团", "宝洁", "河南钢铁集团", "金风科技", "华润集团", "九号公司", "蔚来", "携程", "百威中国", "高途", "北森", "双胞胎集团"]);
+    const APPLIED_COMPANIES = new Set(["中国平安", "宝洁", "百威中国", "高途", "海尔智家", "京东方", "携程", "北森", "立达中国", "锐捷网络", "农夫山泉", "大疆创新", "名创优品", "爱立信", "科大讯飞", "华润集团", "得物", "双胞胎集团", "小米", "戴尔", "卫龙", "长鑫存储", "泡泡玛特", "vivo", "吉利汽车", "新东方教育郑州", "蔚来", "腾讯", "蜜雪冰城", "普度机器人", "中建三局海外事业部", "雅迪科技集团", "理想汽车", "三一集团", "oppo", "特斯拉", "宇通集团", "九号公司", "青岛啤酒", "太古集团", "超聚变", "快手", "宝洁p&g", "中建八局一公司", "金风科技", "河南钢铁集团"]);
 
     let currentDiscoveryModule = 'all';
     let currentDiscoverySearch = '';
@@ -1949,6 +1976,19 @@
           <div class="tag-cloud">${ats.map(k => `<span class="ats-chip">${k}</span>`).join('')}</div>
         </div>`;
       }
+
+            html += `<div class="jd-section" style="background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%); border: 1.5px solid #a7f3d0; border-radius: 10px; padding: 14px;">
+        <div class="jd-subtitle" style="color: #065f46; display: flex; align-items: center; justify-content: space-between;">
+          <span>🦞 牛客 AI 专项求职助手能力联动</span>
+          <span style="font-size: 11px; background: #10b981; color: white; padding: 2px 8px; border-radius: 12px;">已装载 v1.1.2</span>
+        </div>
+        <p style="font-size: 12.5px; color: #047857; margin-bottom: 10px; line-height: 1.5;">针对当前【${job.company}】与岗位，一键生成 AI 提问指令，随时在对话中调起牛客专属技能：</p>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <button class="btn btn-secondary" style="font-size: 12px; padding: 6px 12px; background: white; border: 1px solid #10b981; color: #065f46;" onclick="copyNowClawPrompt('brief')">🏢 一键复制【面试前公司速查】指令</button>
+          <button class="btn btn-secondary" style="font-size: 12px; padding: 6px 12px; background: white; border: 1px solid #10b981; color: #065f46;" onclick="copyNowClawPrompt('interview')">🎙️ 一键复制【岗前模拟面试】指令</button>
+          <button class="btn btn-secondary" style="font-size: 12px; padding: 6px 12px; background: white; border: 1px solid #10b981; color: #065f46;" onclick="copyNowClawPrompt('tailor')">📝 一键复制【定向简历改写】指令</button>
+        </div>
+      </div>`;
 
       document.getElementById('modalJdContent').innerHTML = html;
       document.getElementById('jdModal').style.display = 'flex';
