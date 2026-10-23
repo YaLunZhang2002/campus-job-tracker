@@ -596,10 +596,37 @@ def generate_html_dashboard(ranked_jobs, tracking_db, removed_ids, featured_jobs
         inbox_date_window = f"{(now - timedelta(days=1)).strftime('%m.%d')}-{now.strftime('%m.%d')}"
     featured_ids = {j["id"] for j in featured_jobs}
 
+    # 1. 深度收集所有已投递/已实战企业的核心关键词库，实施全网铁律级物理隔离
+    applied_company_clean_names = set()
+    for jid, t_info in tracking_db.items():
+        st = t_info.get("status")
+        if st and st != "待投递":
+            comp = jid.split("_")[0].strip()
+            for ch in [" ", "(", ")", "（", "）", '"', "'", "“", "”"]:
+                comp = comp.replace(ch, "")
+            if comp:
+                applied_company_clean_names.add(comp.lower())
+
     frontend_data = []
+    seen_delivered_ids = set()
+
     for j in ranked_jobs:
         jid = j["id"]
         t_info = tracking_db.get(jid, {})
+        st = t_info.get("status", j.get("status", "待投递"))
+        
+        # 铁律：只要该企业已被投递/淘汰/考核，未投递的同名变体岗位绝对不在主库中冗余混淆！
+        comp_clean = j.get("company", "").lower()
+        for ch in [" ", "(", ")", "（", "）", '"', "'", "“", "”"]:
+            comp_clean = comp_clean.replace(ch, "")
+        
+        is_comp_applied = any(ac in comp_clean or comp_clean in ac for ac in applied_company_clean_names)
+        if st == "待投递" and is_comp_applied:
+            continue
+            
+        if st != "待投递":
+            seen_delivered_ids.add(jid)
+
         mod = classify_job_module(j.get("company", ""), j.get("industry", "其他"), j.get("positions", []), j.get("tags", []))
         is_mt = is_management_trainee_job(j.get("positions", []), j.get("tags", []), j.get("company", ""), j.get("industry", ""))
         is_foreign = (mod == "外企（中国）")
@@ -662,6 +689,45 @@ def generate_html_dashboard(ranked_jobs, tracking_db, removed_ids, featured_jobs
                 p_clean = clean_str(p_str)
                 b_clean = clean_str(item.get("batch") or "")
                 item["id"] = f"{comp_clean}_{p_clean}_{b_clean}"[:60].strip("_")
+
+    # 补齐 tracking_db 中未在 ranked_jobs 原始匹配到的实战岗位，保证 47 席实战记录 100% 永久在线
+    for jid, t_info in tracking_db.items():
+        if jid not in seen_delivered_ids and t_info.get("status") and t_info.get("status") != "待投递":
+            comp = t_info.get("company", jid.split("_")[0])
+            pos = t_info.get("position", jid.split("_")[1] if "_" in jid else "核心岗位")
+            frontend_data.append({
+                "id": jid,
+                "company": comp,
+                "industry": t_info.get("industry", "重点行业"),
+                "module": t_info.get("module", "实战投递"),
+                "is_mt": "管培" in pos,
+                "is_foreign": False,
+                "cohort": "2026/2027届",
+                "batch": t_info.get("batch", "正式批"),
+                "positions": [pos],
+                "locations": ["全国多地"],
+                "deadline": "以系统流程为准",
+                "apply_url": t_info.get("apply_url", ""),
+                "tier": t_info.get("tier", "S"),
+                "reason": "个人历史实战投递记录",
+                "tags": ["实战在途"],
+                "scale_badge": f"🏛️ {comp} · 实战推进中企业",
+                "salary_range": "💰 薪资以录用为准",
+                "interview_process": "🎯 简历初选 ➔ 笔试/测评 ➔ 业务面试 ➔ 终审",
+                "tips_and_pitfalls": "【实战推进】密切关注邮件与短信测评通知。",
+                "is_featured": True,
+                "is_custom": False,
+                "status": t_info.get("status", "已网申"),
+                "stage": t_info.get("stage", ""),
+                "applied_date": t_info.get("applied_date", ""),
+                "channel": t_info.get("channel", "官方网申"),
+                "notes": t_info.get("notes", ""),
+                "reminders": t_info.get("reminders", ""),
+                "jd": {}
+            })
+
+    initial_statuses_str = json.dumps({jid: info.get("status") for jid, info in tracking_db.items() if info.get("status")}, ensure_ascii=False)
+    applied_comps_str = json.dumps(list(applied_company_clean_names), ensure_ascii=False)
 
     json_str = json.dumps(frontend_data, ensure_ascii=False)
     inbox_json_str = json.dumps(daily_inbox_jobs, ensure_ascii=False)
@@ -1678,6 +1744,9 @@ def generate_html_dashboard(ranked_jobs, tracking_db, removed_ids, featured_jobs
     let DAILY_INBOX_JOBS = {inbox_json_str};
     let REMOVED_IDS = new Set({removed_ids_str});
     let currentMainView = 'discovery'; // 'discovery' | 'inbox' | 'tracking'
+    const INITIAL_STATUSES = {initial_statuses_str};
+    const APPLIED_COMPANIES = new Set({applied_comps_str});
+
     let currentDiscoveryModule = 'all';
     let currentDiscoverySearch = '';
     let currentTrackingFilter = 'all';
@@ -1687,7 +1756,12 @@ def generate_html_dashboard(ranked_jobs, tracking_db, removed_ids, featured_jobs
     let currentViewingJob = null;
 
     function getStoredStatuses() {{
-      try {{ return JSON.parse(localStorage.getItem('job_statuses') || '{{}}'); }} catch(e) {{ return {{}}; }}
+      try {{
+        const local = JSON.parse(localStorage.getItem('job_statuses') || '{{}}');
+        return Object.assign({{}}, INITIAL_STATUSES, local);
+      }} catch(e) {{
+        return Object.assign({{}}, INITIAL_STATUSES);
+      }}
     }}
     function saveStatus(id, newStatus) {{
       const map = getStoredStatuses();
@@ -1741,15 +1815,44 @@ def generate_html_dashboard(ranked_jobs, tracking_db, removed_ids, featured_jobs
       return !!(st && st !== '待投递');
     }}
 
-    // 判断企业是否已在实战投递列表中（用于未投递池的全向隔离，防止已投企业的变体重复出现）
+    // 判断企业是否已在实战投递列表中（用于未投递池的全向绝对隔离，杜绝已投/已淘汰企业的任何变体出现）
     function isCompanyApplied(job, statusMap) {{
       if (isJobDelivered(job, statusMap)) return true;
-      const comp = (job.company || '').toLowerCase();
-      for (const key of Object.keys(statusMap)) {{
-        if (statusMap[key] && statusMap[key] !== '待投递') {{
-          const compPrefix = key.split('_')[0].toLowerCase();
-          if (comp.includes(compPrefix) || compPrefix.includes(comp)) return true;
+      const comp = (job.company || '').toLowerCase().replace(/[\s()（）]/g, '');
+      
+      // 1. 深度匹配 APPLIED_COMPANIES 集合
+      if (typeof APPLIED_COMPANIES !== 'undefined') {{
+        for (const ac of APPLIED_COMPANIES) {{
+          const cleanAc = ac.toLowerCase().replace(/[\s()（）]/g, '');
+          if (cleanAc && (comp.includes(cleanAc) || cleanAc.includes(comp))) {{
+            return true;
+          }}
         }}
+      }}
+
+      // 2. 深度匹配 statusMap 中所有非待投递岗位
+      for (const key of Object.keys(statusMap)) {{
+        const st = statusMap[key];
+        if (st && st !== '待投递') {{
+          const compPrefix = key.split('_')[0].toLowerCase().replace(/[\s()（）]/g, '');
+          if (compPrefix && (comp.includes(compPrefix) || compPrefix.includes(comp))) {{
+            return true;
+          }}
+        }}
+      }}
+
+      // 3. 深度匹配 ALL_JOBS 中同名已交付岗位
+      if (typeof ALL_JOBS !== 'undefined') {{
+        const hasDelivered = ALL_JOBS.some(other => {{
+          if (other.id === job.id) return false;
+          const otherSt = statusMap[other.id] || other.status;
+          if (otherSt && otherSt !== '待投递') {{
+            const otherComp = (other.company || '').toLowerCase().replace(/[\s()（）]/g, '');
+            return otherComp && (comp.includes(otherComp) || otherComp.includes(comp));
+          }}
+          return false;
+        }});
+        if (hasDelivered) return true;
       }}
       return false;
     }}
