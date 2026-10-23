@@ -4,6 +4,9 @@ on:
   schedule:
     # 每天北京时间 08:00 运行（UTC 00:00）
     - cron: '0 0 * * *'
+  push:
+    branches:
+      - main
   workflow_dispatch: # 支持在 GitHub 网页上一键手动点击随时触发
 
 # 赋予写权限以提交更新并部署 GitHub Pages
