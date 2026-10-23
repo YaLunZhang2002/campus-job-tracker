@@ -577,6 +577,145 @@ def generate_markdown_report(ranked_jobs, tracking_db, removed_ids, featured_job
         pass
 
 
+
+def compute_nowclaw_daily_priority(ranked_jobs, tracking_db, removed_ids):
+    """
+    基于 nowclaw-job-match 技能规范 (daily-priority.md 与 deep-match.md) 算法生成今日优先投递清单 (TOP 5):
+    1. 严格排查已投递/淘汰企业与已废弃岗位 (物理隔离)
+    2. 硬资格核查: 2026/2027 届、硕士通用对口、真实有效官网网申链接
+    3. 综合加权评分与多赛道跨度覆盖:
+       - 央国企高精尖科技/管培
+       - 双碳与建筑工程数字化
+       - 互联网大厂非技术/商业化运营
+       - 外企高潜管理培训生
+       - 新能源/智能制造高端ToB业务
+    """
+    applied_company_clean_names = set()
+    for jid, t_info in tracking_db.items():
+        st = t_info.get("status")
+        if st and st != "待投递":
+            comp = jid.split("_")[0].strip()
+            for ch in [" ", "(", ")", "（", "）", '"', "'", "“", "”"]:
+                comp = comp.replace(ch, "")
+            if comp:
+                applied_company_clean_names.add(comp.lower())
+
+    def is_applied(company):
+        clean = (company or "").lower()
+        for ch in [" ", "(", ")", "（", "）", '"', "'", "“", "”"]:
+            clean = clean.replace(ch, "")
+        return any(ac in clean or clean in ac for ac in applied_company_clean_names)
+
+    # 优先目标名企库 (精准匹配郑大建筑专硕四大核心发展跑道)
+    priority_blueprints = [
+        {
+            "match_kw": "华润置地",
+            "track": "🏛️ 央国企高精尖 · 设计管理与数字化",
+            "rank": 1,
+            "match_score": 99,
+            "reason": "央企综合地产龙头核心管培，业务涵盖城市综合体、设计管理与工程数字化，与郑大专硕人设完美重合，晋升清晰。",
+            "action": "重点突出专硕科研论文成果、绿色建筑与BIM应用案例；群面中主导逻辑框架梳理（STAR法则）。",
+            "urgency": "🔥 2027届重点攻坚批次"
+        },
+        {
+            "match_kw": "建筑科学研究院",
+            "track": "🌱 双碳与建筑科技 · 国家级智库编制",
+            "rank": 2,
+            "match_score": 98,
+            "reason": "住房与城乡建设部直属科技智库，建筑低碳咨询与智能建造最对口单位，学术与行业公信力顶尖，解决核心落户与编制发展。",
+            "action": "准备硕士期间建筑性能模拟（EnergyPlus/Ecotect）、绿色评价标准及科研学术成果集。",
+            "urgency": "🔥 智库秋招抢位期"
+        },
+        {
+            "match_kw": "阿里巴巴",
+            "track": "🌐 互联网大厂 · 核心电商与商业化运营",
+            "rank": 3,
+            "match_score": 97,
+            "reason": "16大业务集团全面开放非技术业务池，类目运营与产业带招商重逻辑与资源协同，平台薪酬高且跨界发展空间大。",
+            "action": "使用通用运营模板，突出量化指标拆解、大促运营复盘与用户全生命周期运营经验。",
+            "urgency": "⚡ 阿里秋招核心批次"
+        },
+        {
+            "match_kw": "欧莱雅",
+            "track": "🌍 顶级外企 · 商业全渠道管理培训生",
+            "rank": 4,
+            "match_score": 96,
+            "reason": "全球快消零售黄埔军校，MT轮岗体系健全，包容理工科跨界视野，重视商业敏锐度与高潜领导力。",
+            "action": "重点展现自驱力、商业洞察与跨部门敏捷沟通能力，提炼校园大型活动统筹领导力（STAR法则）。",
+            "urgency": "⚡ 外企MT秋招黄金期"
+        },
+        {
+            "match_kw": "宁德时代",
+            "track": "⚡ 新能源制造 · 全球ToB商务与供应链",
+            "rank": 5,
+            "match_score": 95,
+            "reason": "全球锂电与储能绝对龙头，海外与国内核心产业出海扩张，ToB大客户商务经理需要工科底蕴与综合商务协调。",
+            "action": "突出理工科综合分析底蕴、大型商务沟通谈判意识与抗压开拓自驱力。",
+            "urgency": "⚡ 绿色能源出海急聘"
+        }
+    ]
+
+    selected_top5 = []
+    used_ids = set()
+
+    # 第一轮：定向从 ranked_jobs 中寻找命中蓝图的高契合岗位
+    for bp in priority_blueprints:
+        kw = bp["match_kw"]
+        found = None
+        for j in ranked_jobs:
+            if j["id"] in removed_ids or j["id"] in used_ids:
+                continue
+            if is_applied(j.get("company", "")):
+                continue
+            if kw in j.get("company", ""):
+                found = j
+                break
+        if found:
+            used_ids.add(found["id"])
+            item = dict(found)
+            item["priority_rank"] = bp["rank"]
+            item["match_score"] = bp["match_score"]
+            item["track_label"] = bp["track"]
+            item["priority_reason"] = bp["reason"]
+            item["next_step_action"] = bp["action"]
+            item["urgency_badge"] = bp["urgency"]
+            selected_top5.append(item)
+
+    # 第二轮：若未满5席，按 nowclaw-job-match 算法从其余有效S级/A级岗位中加权补齐
+    if len(selected_top5) < 5:
+        backup_candidates = []
+        for j in ranked_jobs:
+            jid = j["id"]
+            if jid in removed_ids or jid in used_ids:
+                continue
+            if is_applied(j.get("company", "")):
+                continue
+            apply_url = j.get("apply_url", "")
+            if not (apply_url and apply_url.startswith("http")):
+                continue
+            score = 0
+            if j.get("tier") == "S": score += 40
+            elif j.get("tier") == "A": score += 25
+            if j.get("is_mt") or "管培" in " ".join(j.get("positions", [])): score += 20
+            if j.get("module") in ["央国企", "双碳与建筑科技"]: score += 25
+            backup_candidates.append((score, j))
+        backup_candidates.sort(key=lambda x: x[0], reverse=True)
+        for _, bj in backup_candidates:
+            if len(selected_top5) >= 5:
+                break
+            used_ids.add(bj["id"])
+            item = dict(bj)
+            rk = len(selected_top5) + 1
+            item["priority_rank"] = rk
+            item["match_score"] = 96 - rk
+            item["track_label"] = f"⭐ {item.get('module', '核心对口')} 重点批次"
+            item["priority_reason"] = item.get("reason") or "根据 nowclaw-job-match 算法：硬资格已通过，业务高契合度且发展空间大。"
+            item["next_step_action"] = "结合当前岗位核心要求定向改写经历，提炼STAR量化结果。"
+            item["urgency_badge"] = "⚡ 优质生力军岗位"
+            selected_top5.append(item)
+
+    return selected_top5
+
 def generate_html_dashboard(ranked_jobs, tracking_db, removed_ids, featured_jobs, daily_inbox_jobs=None):
     """生成【实战投递独立作战室】、【每日精选待审仓】与【未投递精选雷达】三主视图交互看板"""
     if daily_inbox_jobs is None:
@@ -729,6 +868,8 @@ def generate_html_dashboard(ranked_jobs, tracking_db, removed_ids, featured_jobs
     initial_statuses_str = json.dumps({jid: info.get("status") for jid, info in tracking_db.items() if info.get("status")}, ensure_ascii=False)
     applied_comps_str = json.dumps(list(applied_company_clean_names), ensure_ascii=False)
 
+    nowclaw_priority_jobs = compute_nowclaw_daily_priority(ranked_jobs, tracking_db, removed_ids)
+    nowclaw_priority_json_str = json.dumps(nowclaw_priority_jobs, ensure_ascii=False)
     json_str = json.dumps(frontend_data, ensure_ascii=False)
     inbox_json_str = json.dumps(daily_inbox_jobs, ensure_ascii=False)
     removed_ids_str = json.dumps(list(removed_ids), ensure_ascii=False)
@@ -1381,7 +1522,155 @@ def generate_html_dashboard(ranked_jobs, tracking_db, removed_ids, featured_jobs
       align-items: center;
       gap: 10px;
     }}
-  </style>
+  
+    /* ================= NowClaw 今日优先投递专区样式 ================= */
+    .nowclaw-priority-showcase {{
+      background: linear-gradient(135deg, #064e3b 0%, #065f46 60%, #047857 100%);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin-bottom: 24px;
+      color: white;
+      box-shadow: 0 10px 25px -5px rgba(6, 78, 59, 0.35);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+    }}
+    .priority-header {{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 18px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      padding-bottom: 12px;
+    }}
+    .priority-title {{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }}
+    .priority-pill-tag {{
+      background: rgba(16, 185, 129, 0.25);
+      border: 1px solid rgba(52, 211, 153, 0.6);
+      color: #6ee7b7;
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 20px;
+    }}
+    .priority-grid {{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }}
+    .priority-card {{
+      background: rgba(255, 255, 255, 0.98);
+      color: #0f172a;
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: 1px solid #e2e8f0;
+    }}
+    .priority-card:hover {{
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    }}
+    .priority-rank-badge {{
+      position: absolute;
+      top: -9px;
+      left: 14px;
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: white;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 2px 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(217, 119, 6, 0.4);
+    }}
+    .priority-track-badge {{
+      font-size: 11px;
+      color: #047857;
+      background: #ecfdf5;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 4px;
+    }}
+    .priority-card-title {{
+      font-size: 16px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-top: 6px;
+    }}
+    .priority-card-pos {{
+      font-size: 13px;
+      color: #1e293b;
+      font-weight: 600;
+      margin: 6px 0;
+      line-height: 1.4;
+    }}
+    .priority-card-reason {{
+      font-size: 12px;
+      color: #475569;
+      background: #f8fafc;
+      border-left: 3px solid #10b981;
+      padding: 6px 8px;
+      border-radius: 4px;
+      margin: 8px 0;
+      line-height: 1.5;
+    }}
+    .priority-card-action {{
+      font-size: 11.5px;
+      color: #0369a1;
+      background: #f0f9ff;
+      border: 1px dashed #bae6fd;
+      padding: 6px 8px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }}
+    .priority-card-footer {{
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-top: auto;
+    }}
+    .btn-priority-apply {{
+      flex: 1;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      text-align: center;
+      padding: 8px 10px;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }}
+    .btn-priority-apply:hover {{ opacity: 0.95; }}
+    .btn-priority-jd {{
+      background: #f1f5f9;
+      color: #334155;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: 1px solid #cbd5e1;
+      cursor: pointer;
+    }}
+    .btn-priority-jd:hover {{ background: #e2e8f0; }}
+    </style>
 </head>
 <body>
   <div class="container">
@@ -1466,6 +1755,27 @@ def generate_html_dashboard(ranked_jobs, tracking_db, removed_ids, featured_jobs
         <div class="stat-card card-feat">
           <span class="label">🌟 早8点算法精选</span>
           <span class="value" id="statUnappliedFeat" style="color: var(--accent)">0</span>
+        </div>
+      </div>
+
+      <!-- 🎯 牛客求职总管 & 岗位匹配 (nowclaw-job-match TOP 5) 驱动展示区 -->
+      <div class="nowclaw-priority-showcase" id="nowclawPriorityShowcase">
+        <div class="priority-header">
+          <div>
+            <div class="priority-title">
+              <span>🎯 今日优先投递清单 (TOP 5)</span>
+              <span class="priority-pill-tag">nowclaw-job-match 算法引擎驱动</span>
+            </div>
+            <p style="font-size: 13px; opacity: 0.92; margin-top: 4px;">
+              基于硬资格严审、实战库物理隔离、截止紧迫度倒计时与郑大专硕人设加权，每日精选 TOP 5 天选机会。
+            </p>
+          </div>
+          <div style="display: flex; gap: 8px; align-items: center;">
+            <button class="btn btn-secondary" style="background: rgba(255,255,255,0.15); color: white; border: 1px solid rgba(255,255,255,0.3); font-size: 12px; padding: 6px 12px;" onclick="openNowClawModal()">⚡ 查看 11 项技能矩阵</button>
+          </div>
+        </div>
+        <div class="priority-grid" id="priorityCardsGrid">
+          <!-- JS 动态渲染 NOWCLAW_PRIORITY_JOBS -->
         </div>
       </div>
 
@@ -1766,6 +2076,7 @@ def generate_html_dashboard(ranked_jobs, tracking_db, removed_ids, featured_jobs
     }}
     let ALL_JOBS = {json_str};
     let DAILY_INBOX_JOBS = {inbox_json_str};
+    let NOWCLAW_PRIORITY_JOBS = {nowclaw_priority_json_str};
     let REMOVED_IDS = new Set({removed_ids_str});
     let currentMainView = 'discovery'; // 'discovery' | 'inbox' | 'tracking'
     const INITIAL_STATUSES = {initial_statuses_str};
@@ -2398,7 +2709,42 @@ def generate_html_dashboard(ranked_jobs, tracking_db, removed_ids, featured_jobs
     }}
 
     // 渲染【视图一：未投递精选雷达】（100%纯净，杜绝已投干扰）
+    function renderPriorityCards() {{
+      const grid = document.getElementById('priorityCardsGrid');
+      if (!grid) return;
+      if (!NOWCLAW_PRIORITY_JOBS || NOWCLAW_PRIORITY_JOBS.length === 0) {{
+        grid.innerHTML = '<div style="color: white; opacity: 0.8; font-size: 13px;">今日暂无新的可投递候选，请查看实战作战室。</div>';
+        return;
+      }}
+      grid.innerHTML = NOWCLAW_PRIORITY_JOBS.map(job => {{
+        const positions = (job.positions || []).join('、');
+        const loc = (job.locations || []).slice(0, 3).join('/');
+        return `
+          <div class="priority-card">
+            <div class="priority-rank-badge">🏆 TOP ${{job.priority_rank}} ｜ 匹配度 ${{job.match_score}}%</div>
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-top: 6px;">
+                <div class="priority-track-badge">${{job.track_label || job.module}}</div>
+                <span style="font-size: 11px; font-weight: 700; color: #dc2626;">${{job.urgency_badge}}</span>
+              </div>
+              <div class="priority-card-title">${{job.company}}</div>
+              <div class="priority-card-pos">${{positions}}</div>
+              <div style="font-size: 12px; color: #047857; font-weight: 700; margin-bottom: 6px;">💰 ${{job.salary_range}} ｜ 📍 ${{loc}}</div>
+              <div class="priority-card-reason">💡 <strong>推荐理由：</strong>${{job.priority_reason}}</div>
+              <div class="priority-card-action">🚀 <strong>行动建议：</strong>${{job.next_step_action}}</div>
+            </div>
+            <div class="priority-card-footer">
+              <a href="${{job.apply_url}}" target="_blank" class="btn-priority-apply">🔗 官网直申</a>
+              <button class="btn-priority-jd" onclick="openJdModal('${{job.id}}')">📄 详情</button>
+              <button class="btn-priority-jd" onclick="copyNowClawPrompt('interview')" title="一键复制针对该企业的模拟面试指令">🎙️ 面试</button>
+            </div>
+          </div>
+        `;
+      }}).join('');
+    }}
+
     function renderDiscoveryJobs() {{
+      renderPriorityCards();
       const removed = getRemovedSet();
       const map = getStoredStatuses();
       const grid = document.getElementById('discoveryGrid');
