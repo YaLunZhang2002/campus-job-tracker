@@ -1,37 +1,37 @@
 [
   {
-    "id": "中国联通_新苗计划：AI研发_正式批",
-    "company": "中国联通",
-    "industry": "央国企",
-    "module": "央国企龙头",
-    "recommended_module": "央国企龙头",
-    "cohort": "2027届（2026届未就业亦可）",
+    "id": "字节跳动_研发_正式批",
+    "company": "字节跳动",
+    "industry": "互联网大厂",
+    "module": "互联网大厂",
+    "recommended_module": "互联网大厂",
+    "cohort": "2027届（2026.9-2027.8毕业）",
     "batch": "正式批",
     "positions": [
-      "新苗计划：AI研发",
-      "网络安全",
-      "量子通信"
+      "研发",
+      "产品",
+      "运营"
     ],
     "locations": [
       "全国多中心/重点城市可选"
     ],
-    "deadline": "2026-09-22",
-    "apply_url": "https://zglt.chinaunicom-job.com/",
-    "announcement_url": "https://zglt.chinaunicom-job.com/",
-    "announcement_title": "中国联通 2027届秋招公告 (官方直聘更新)",
+    "deadline": "2027-05-31",
+    "apply_url": "https://jobs.bytedance.com/campus/position",
+    "announcement_url": "https://jobs.bytedance.com/campus/position",
+    "announcement_title": "字节跳动 2027届秋招公告 (官方直聘更新)",
     "tier": "S",
-    "scale_badge": "🏛️ 中国联通 · 行业领航企业 / 规范福利与广阔晋升通道",
+    "scale_badge": "🏛️ 字节跳动 · 行业领航企业 / 规范福利与广阔晋升通道",
     "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
     "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
-    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】中国联通 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
-    "date_released": "2026-08-27",
+    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】字节跳动 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
+    "date_released": "2026-08-03",
     "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
     "is_featured": true,
     "is_mt": false,
     "is_foreign": false,
     "jd": {
       "responsibilities": [
-        "参与 新苗计划：AI研发 核心板块的业务推进、数据分析与策略执行；",
+        "参与 研发 核心板块的业务推进、数据分析与策略执行；",
         "协同跨职能团队推进关键项目目标达成。"
       ],
       "requirements": [
@@ -40,7 +40,7 @@
       ],
       "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
       "ats_keywords": [
-        "中国联通",
+        "字节跳动",
         "2027校招",
         "管培生",
         "业务运营",
@@ -49,82 +49,33 @@
     }
   },
   {
-    "id": "拼多多_云弧计划大模型算法_提前批",
-    "company": "拼多多",
+    "id": "阿里巴巴_算法_正式批",
+    "company": "阿里巴巴",
     "industry": "互联网大厂",
     "module": "互联网大厂",
     "recommended_module": "互联网大厂",
-    "cohort": "2027届（2026.9-2027.8毕业）",
-    "batch": "提前批",
-    "positions": [
-      "云弧计划（大模型算法",
-      "AI Infra）",
-      "服务端"
-    ],
-    "locations": [
-      "全国多中心/重点城市可选"
-    ],
-    "deadline": "2026-08-23",
-    "apply_url": "https://careers.pddglobalhr.com/campus/grad",
-    "announcement_url": "https://careers.pddglobalhr.com/campus/grad",
-    "announcement_title": "拼多多 2027届秋招公告 (官方直聘更新)",
-    "tier": "S",
-    "scale_badge": "🏛️ 拼多多 · 行业领航企业 / 规范福利与广阔晋升通道",
-    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
-    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
-    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】拼多多 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
-    "date_released": "2026-07-06",
-    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
-    "is_featured": true,
-    "is_mt": true,
-    "is_foreign": false,
-    "jd": {
-      "responsibilities": [
-        "参与 云弧计划（大模型算法 核心板块的业务推进、数据分析与策略执行；",
-        "协同跨职能团队推进关键项目目标达成。"
-      ],
-      "requirements": [
-        "2026/2027届应届毕业生，硕士及以上学历优先；",
-        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
-      ],
-      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
-      "ats_keywords": [
-        "拼多多",
-        "2027校招",
-        "管培生",
-        "业务运营",
-        "项目企划"
-      ]
-    }
-  },
-  {
-    "id": "地平线_算法_正式批",
-    "company": "地平线",
-    "industry": "互联网大厂",
-    "module": "全品类头部大厂",
-    "recommended_module": "全品类头部大厂",
-    "cohort": "2027届（2026.9.1-2027.8.31毕业）",
+    "cohort": "2027届（2026.11.1-2027.10.31毕业）",
     "batch": "正式批",
     "positions": [
       "算法",
-      "芯片",
-      "软件"
+      "研发",
+      "芯片"
     ],
     "locations": [
       "全国多中心/重点城市可选"
     ],
-    "deadline": "2026-10-30",
-    "apply_url": "https://wecruit.hotjob.cn/SU62d915040dcad43c775ec12c/mc/position/campus?channelId=149807",
-    "announcement_url": "https://wecruit.hotjob.cn/SU62d915040dcad43c775ec12c/mc/position/campus?channelId=149807",
-    "announcement_title": "地平线 2027届秋招公告 (官方直聘更新)",
-    "tier": "A",
-    "scale_badge": "🏛️ 地平线 · 行业领航企业 / 规范福利与广阔晋升通道",
+    "deadline": "2026-11-30",
+    "apply_url": "https://talent.alibaba.com/campus/position-list?campusType=graduate",
+    "announcement_url": "https://talent.alibaba.com/campus/position-list?campusType=graduate",
+    "announcement_title": "阿里巴巴 2027届秋招公告 (官方直聘更新)",
+    "tier": "S",
+    "scale_badge": "🏛️ 阿里巴巴 · 行业领航企业 / 规范福利与广阔晋升通道",
     "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
     "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
-    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】地平线 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
-    "date_released": "2026-08-10",
+    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】阿里巴巴 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
+    "date_released": "2026-08-05",
     "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
-    "is_featured": false,
+    "is_featured": true,
     "is_mt": false,
     "is_foreign": false,
     "jd": {
@@ -138,7 +89,7 @@
       ],
       "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
       "ats_keywords": [
-        "地平线",
+        "阿里巴巴",
         "2027校招",
         "管培生",
         "业务运营",
@@ -147,38 +98,38 @@
     }
   },
   {
-    "id": "滴滴_工程_正式批",
-    "company": "滴滴",
+    "id": "百度_AI大模型_正式批",
+    "company": "百度",
     "industry": "互联网大厂",
     "module": "互联网大厂",
     "recommended_module": "互联网大厂",
-    "cohort": "2027届（2026.9-2027.8毕业）",
+    "cohort": "2027届",
     "batch": "正式批",
     "positions": [
-      "工程",
-      "算法",
-      "机器人"
+      "AI大模型",
+      "自动驾驶",
+      "算法"
     ],
     "locations": [
       "全国多中心/重点城市可选"
     ],
     "deadline": "2026-11-30",
-    "apply_url": "https://campus.didiglobal.com/",
-    "announcement_url": "https://campus.didiglobal.com/",
-    "announcement_title": "滴滴 2027届秋招公告 (官方直聘更新)",
+    "apply_url": "https://talent.baidu.com/jobs/list",
+    "announcement_url": "https://talent.baidu.com/jobs/list",
+    "announcement_title": "百度 2027届秋招公告 (官方直聘更新)",
     "tier": "A",
-    "scale_badge": "🏛️ 滴滴 · 行业领航企业 / 规范福利与广阔晋升通道",
+    "scale_badge": "🏛️ 百度 · 行业领航企业 / 规范福利与广阔晋升通道",
     "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
     "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
-    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】滴滴 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
-    "date_released": "2026-08-13",
+    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】百度 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
+    "date_released": "2026-07-09",
     "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
     "is_featured": false,
     "is_mt": false,
     "is_foreign": false,
     "jd": {
       "responsibilities": [
-        "参与 工程 核心板块的业务推进、数据分析与策略执行；",
+        "参与 AI大模型 核心板块的业务推进、数据分析与策略执行；",
         "协同跨职能团队推进关键项目目标达成。"
       ],
       "requirements": [
@@ -187,7 +138,7 @@
       ],
       "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
       "ats_keywords": [
-        "滴滴",
+        "百度",
         "2027校招",
         "管培生",
         "业务运营",
@@ -196,8 +147,687 @@
     }
   },
   {
-    "id": "招商银行·招银网络科技_2027秋季校园招聘科技_正式批",
-    "company": "招商银行·招银网络科技",
+    "id": "哔哩哔哩B站_技术类_正式批",
+    "company": "哔哩哔哩（B站）",
+    "industry": "互联网大厂",
+    "module": "全品类头部大厂",
+    "recommended_module": "全品类头部大厂",
+    "cohort": "2027届（2026.9.1-2027.8.31毕业）",
+    "batch": "正式批",
+    "positions": [
+      "技术类",
+      "产品运营类",
+      "内容类"
+    ],
+    "locations": [
+      "全国多中心/重点城市可选"
+    ],
+    "deadline": "2026-12-31",
+    "apply_url": "https://campus.bilibili.com",
+    "announcement_url": "https://campus.bilibili.com",
+    "announcement_title": "哔哩哔哩（B站） 2027届秋招公告 (官方直聘更新)",
+    "tier": "A",
+    "scale_badge": "🏛️ 哔哩哔哩（B站） · 行业领航企业 / 规范福利与广阔晋升通道",
+    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
+    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
+    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】哔哩哔哩（B站） 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
+    "date_released": "2026-08-03",
+    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
+    "is_featured": false,
+    "is_mt": false,
+    "is_foreign": false,
+    "jd": {
+      "responsibilities": [
+        "参与 技术类 核心板块的业务推进、数据分析与策略执行；",
+        "协同跨职能团队推进关键项目目标达成。"
+      ],
+      "requirements": [
+        "2026/2027届应届毕业生，硕士及以上学历优先；",
+        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
+      ],
+      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
+      "ats_keywords": [
+        "哔哩哔哩（B站）",
+        "2027校招",
+        "管培生",
+        "业务运营",
+        "项目企划"
+      ]
+    }
+  },
+  {
+    "id": "蚂蚁集团_技术岗占比80%_正式批",
+    "company": "蚂蚁集团",
+    "industry": "互联网大厂",
+    "module": "全品类头部大厂",
+    "recommended_module": "全品类头部大厂",
+    "cohort": "2027届",
+    "batch": "正式批",
+    "positions": [
+      "技术岗（占比80%",
+      "超80% AI相关）"
+    ],
+    "locations": [
+      "全国多中心/重点城市可选"
+    ],
+    "deadline": "2026-11-30",
+    "apply_url": "https://talent.antgroup.com",
+    "announcement_url": "https://talent.antgroup.com",
+    "announcement_title": "蚂蚁集团 2027届秋招公告 (官方直聘更新)",
+    "tier": "A",
+    "scale_badge": "🏛️ 蚂蚁集团 · 行业领航企业 / 规范福利与广阔晋升通道",
+    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
+    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
+    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】蚂蚁集团 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
+    "date_released": "2026-08-10",
+    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
+    "is_featured": false,
+    "is_mt": false,
+    "is_foreign": false,
+    "jd": {
+      "responsibilities": [
+        "参与 技术岗（占比80% 核心板块的业务推进、数据分析与策略执行；",
+        "协同跨职能团队推进关键项目目标达成。"
+      ],
+      "requirements": [
+        "2026/2027届应届毕业生，硕士及以上学历优先；",
+        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
+      ],
+      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
+      "ats_keywords": [
+        "蚂蚁集团",
+        "2027校招",
+        "管培生",
+        "业务运营",
+        "项目企划"
+      ]
+    }
+  },
+  {
+    "id": "美团_技术_正式批",
+    "company": "美团",
+    "industry": "互联网大厂",
+    "module": "互联网大厂",
+    "recommended_module": "互联网大厂",
+    "cohort": "2027届",
+    "batch": "正式批",
+    "positions": [
+      "技术",
+      "产品",
+      "运营"
+    ],
+    "locations": [
+      "全国多中心/重点城市可选"
+    ],
+    "deadline": "2026-10-31",
+    "apply_url": "https://zhaopin.meituan.com/web/campus",
+    "announcement_url": "https://zhaopin.meituan.com/web/campus",
+    "announcement_title": "美团 2027届秋招公告 (官方直聘更新)",
+    "tier": "S",
+    "scale_badge": "🏛️ 美团 · 行业领航企业 / 规范福利与广阔晋升通道",
+    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
+    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
+    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】美团 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
+    "date_released": "2026-08-17",
+    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
+    "is_featured": true,
+    "is_mt": false,
+    "is_foreign": false,
+    "jd": {
+      "responsibilities": [
+        "参与 技术 核心板块的业务推进、数据分析与策略执行；",
+        "协同跨职能团队推进关键项目目标达成。"
+      ],
+      "requirements": [
+        "2026/2027届应届毕业生，硕士及以上学历优先；",
+        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
+      ],
+      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
+      "ats_keywords": [
+        "美团",
+        "2027校招",
+        "管培生",
+        "业务运营",
+        "项目企划"
+      ]
+    }
+  },
+  {
+    "id": "网易_应届生_正式批",
+    "company": "网易",
+    "industry": "互联网大厂",
+    "module": "互联网大厂",
+    "recommended_module": "互联网大厂",
+    "cohort": "2027届",
+    "batch": "正式批",
+    "positions": [
+      "应届生",
+      "精英实习生（技术",
+      "产品"
+    ],
+    "locations": [
+      "全国多中心/重点城市可选"
+    ],
+    "deadline": "2026-11-30",
+    "apply_url": "https://campus.163.com/",
+    "announcement_url": "https://campus.163.com/",
+    "announcement_title": "网易 2027届秋招公告 (官方直聘更新)",
+    "tier": "A",
+    "scale_badge": "🏛️ 网易 · 行业领航企业 / 规范福利与广阔晋升通道",
+    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
+    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
+    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】网易 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
+    "date_released": "2026-08-12",
+    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
+    "is_featured": false,
+    "is_mt": false,
+    "is_foreign": false,
+    "jd": {
+      "responsibilities": [
+        "参与 应届生 核心板块的业务推进、数据分析与策略执行；",
+        "协同跨职能团队推进关键项目目标达成。"
+      ],
+      "requirements": [
+        "2026/2027届应届毕业生，硕士及以上学历优先；",
+        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
+      ],
+      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
+      "ats_keywords": [
+        "网易",
+        "2027校招",
+        "管培生",
+        "业务运营",
+        "项目企划"
+      ]
+    }
+  },
+  {
+    "id": "华为_2027届顶尖AI人才专项行动_正式批",
+    "company": "华为",
+    "industry": "互联网大厂",
+    "module": "全品类头部大厂",
+    "recommended_module": "全品类头部大厂",
+    "cohort": "2027届",
+    "batch": "正式批",
+    "positions": [
+      "2027届顶尖AI人才专项行动",
+      "天才少年（芯片",
+      "AI大模型）"
+    ],
+    "locations": [
+      "全国多中心/重点城市可选"
+    ],
+    "deadline": "2026-11-30",
+    "apply_url": "https://career.huawei.com/reccampportal/portal5/campus-recruitment.html",
+    "announcement_url": "https://career.huawei.com/reccampportal/portal5/campus-recruitment.html",
+    "announcement_title": "华为 2027届秋招公告 (官方直聘更新)",
+    "tier": "S",
+    "scale_badge": "🏛️ 华为 · 行业领航企业 / 规范福利与广阔晋升通道",
+    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
+    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
+    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】华为 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
+    "date_released": "2026-07-15",
+    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
+    "is_featured": true,
+    "is_mt": false,
+    "is_foreign": false,
+    "jd": {
+      "responsibilities": [
+        "参与 2027届顶尖AI人才专项行动 核心板块的业务推进、数据分析与策略执行；",
+        "协同跨职能团队推进关键项目目标达成。"
+      ],
+      "requirements": [
+        "2026/2027届应届毕业生，硕士及以上学历优先；",
+        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
+      ],
+      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
+      "ats_keywords": [
+        "华为",
+        "2027校招",
+        "管培生",
+        "业务运营",
+        "项目企划"
+      ]
+    }
+  },
+  {
+    "id": "联想_技术_正式批",
+    "company": "联想",
+    "industry": "互联网大厂",
+    "module": "全品类头部大厂",
+    "recommended_module": "全品类头部大厂",
+    "cohort": "2027届本科及以上",
+    "batch": "正式批",
+    "positions": [
+      "技术",
+      "产品与销售",
+      "供应链"
+    ],
+    "locations": [
+      "全国多中心/重点城市可选"
+    ],
+    "deadline": "2026-11-13",
+    "apply_url": "https://talent.lenovo.com.cn/",
+    "announcement_url": "https://talent.lenovo.com.cn/",
+    "announcement_title": "联想 2027届秋招公告 (官方直聘更新)",
+    "tier": "A",
+    "scale_badge": "🏛️ 联想 · 行业领航企业 / 规范福利与广阔晋升通道",
+    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
+    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
+    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】联想 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
+    "date_released": "2026-08-05",
+    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
+    "is_featured": false,
+    "is_mt": false,
+    "is_foreign": false,
+    "jd": {
+      "responsibilities": [
+        "参与 技术 核心板块的业务推进、数据分析与策略执行；",
+        "协同跨职能团队推进关键项目目标达成。"
+      ],
+      "requirements": [
+        "2026/2027届应届毕业生，硕士及以上学历优先；",
+        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
+      ],
+      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
+      "ats_keywords": [
+        "联想",
+        "2027校招",
+        "管培生",
+        "业务运营",
+        "项目企划"
+      ]
+    }
+  },
+  {
+    "id": "寒武纪_芯片类_正式批",
+    "company": "寒武纪",
+    "industry": "互联网大厂",
+    "module": "全品类头部大厂",
+    "recommended_module": "全品类头部大厂",
+    "cohort": "2027届（2026.9-2027.8毕业）",
+    "batch": "正式批",
+    "positions": [
+      "芯片类",
+      "软件类",
+      "职能与研发支持类"
+    ],
+    "locations": [
+      "全国多中心/重点城市可选"
+    ],
+    "deadline": "2026-11-30",
+    "apply_url": "https://www.cambricon.com",
+    "announcement_url": "https://www.cambricon.com",
+    "announcement_title": "寒武纪 2027届秋招公告 (官方直聘更新)",
+    "tier": "A",
+    "scale_badge": "🏛️ 寒武纪 · 行业领航企业 / 规范福利与广阔晋升通道",
+    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
+    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
+    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】寒武纪 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
+    "date_released": "2026-08-10",
+    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
+    "is_featured": false,
+    "is_mt": false,
+    "is_foreign": false,
+    "jd": {
+      "responsibilities": [
+        "参与 芯片类 核心板块的业务推进、数据分析与策略执行；",
+        "协同跨职能团队推进关键项目目标达成。"
+      ],
+      "requirements": [
+        "2026/2027届应届毕业生，硕士及以上学历优先；",
+        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
+      ],
+      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
+      "ats_keywords": [
+        "寒武纪",
+        "2027校招",
+        "管培生",
+        "业务运营",
+        "项目企划"
+      ]
+    }
+  },
+  {
+    "id": "荣耀_多方向全球校招_正式批",
+    "company": "荣耀",
+    "industry": "互联网大厂",
+    "module": "全品类头部大厂",
+    "recommended_module": "全品类头部大厂",
+    "cohort": "2027届",
+    "batch": "正式批",
+    "positions": [
+      "多方向（全球校招）"
+    ],
+    "locations": [
+      "全国多中心/重点城市可选"
+    ],
+    "deadline": "2026-09-30",
+    "apply_url": "https://www.honor.com/cn/career/",
+    "announcement_url": "https://www.honor.com/cn/career/",
+    "announcement_title": "荣耀 2027届秋招公告 (官方直聘更新)",
+    "tier": "A",
+    "scale_badge": "🏛️ 荣耀 · 行业领航企业 / 规范福利与广阔晋升通道",
+    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
+    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
+    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】荣耀 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
+    "date_released": "2026-08-12",
+    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
+    "is_featured": false,
+    "is_mt": false,
+    "is_foreign": false,
+    "jd": {
+      "responsibilities": [
+        "参与 多方向（全球校招） 核心板块的业务推进、数据分析与策略执行；",
+        "协同跨职能团队推进关键项目目标达成。"
+      ],
+      "requirements": [
+        "2026/2027届应届毕业生，硕士及以上学历优先；",
+        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
+      ],
+      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
+      "ats_keywords": [
+        "荣耀",
+        "2027校招",
+        "管培生",
+        "业务运营",
+        "项目企划"
+      ]
+    }
+  },
+  {
+    "id": "中国电信_市场_正式批",
+    "company": "中国电信",
+    "industry": "央国企",
+    "module": "央国企龙头",
+    "recommended_module": "央国企龙头",
+    "cohort": "2027届（2026届未就业亦可）",
+    "batch": "正式批",
+    "positions": [
+      "市场",
+      "销售与服务",
+      "产品"
+    ],
+    "locations": [
+      "全国多中心/重点城市可选"
+    ],
+    "deadline": "2026-11-30",
+    "apply_url": "https://job.chinatelecom.com.cn/",
+    "announcement_url": "https://job.chinatelecom.com.cn/",
+    "announcement_title": "中国电信 2027届秋招公告 (官方直聘更新)",
+    "tier": "S",
+    "scale_badge": "🏛️ 中国电信 · 行业领航企业 / 规范福利与广阔晋升通道",
+    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
+    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
+    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】中国电信 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
+    "date_released": "2026-08-24",
+    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
+    "is_featured": true,
+    "is_mt": false,
+    "is_foreign": false,
+    "jd": {
+      "responsibilities": [
+        "参与 市场 核心板块的业务推进、数据分析与策略执行；",
+        "协同跨职能团队推进关键项目目标达成。"
+      ],
+      "requirements": [
+        "2026/2027届应届毕业生，硕士及以上学历优先；",
+        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
+      ],
+      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
+      "ats_keywords": [
+        "中国电信",
+        "2027校招",
+        "管培生",
+        "业务运营",
+        "项目企划"
+      ]
+    }
+  },
+  {
+    "id": "中核集团_核科技_正式批",
+    "company": "中核集团",
+    "industry": "央国企",
+    "module": "全品类头部大厂",
+    "recommended_module": "全品类头部大厂",
+    "cohort": "2027届博士、硕士、本科",
+    "batch": "正式批",
+    "positions": [
+      "核科技",
+      "工程建筑",
+      "地质矿产"
+    ],
+    "locations": [
+      "全国多中心/重点城市可选"
+    ],
+    "deadline": "2026-11-30",
+    "apply_url": "https://cnnc.iguopin.com/",
+    "announcement_url": "https://cnnc.iguopin.com/",
+    "announcement_title": "中核集团 2027届秋招公告 (官方直聘更新)",
+    "tier": "A",
+    "scale_badge": "🏛️ 中核集团 · 行业领航企业 / 规范福利与广阔晋升通道",
+    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
+    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
+    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】中核集团 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
+    "date_released": "2026-08-14",
+    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
+    "is_featured": false,
+    "is_mt": false,
+    "is_foreign": false,
+    "jd": {
+      "responsibilities": [
+        "参与 核科技 核心板块的业务推进、数据分析与策略执行；",
+        "协同跨职能团队推进关键项目目标达成。"
+      ],
+      "requirements": [
+        "2026/2027届应届毕业生，硕士及以上学历优先；",
+        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
+      ],
+      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
+      "ats_keywords": [
+        "中核集团",
+        "2027校招",
+        "管培生",
+        "业务运营",
+        "项目企划"
+      ]
+    }
+  },
+  {
+    "id": "中国东方资产管理_2027年度校园招聘金融类多岗位_正式批",
+    "company": "中国东方资产管理",
+    "industry": "央国企",
+    "module": "央国企龙头",
+    "recommended_module": "央国企龙头",
+    "cohort": "2027届",
+    "batch": "正式批",
+    "positions": [
+      "2027年度校园招聘（金融类多岗位）"
+    ],
+    "locations": [
+      "全国多中心/重点城市可选"
+    ],
+    "deadline": "2026-09-18",
+    "apply_url": "https://www.iguopin.com",
+    "announcement_url": "https://www.iguopin.com",
+    "announcement_title": "中国东方资产管理 2027届秋招公告 (官方直聘更新)",
+    "tier": "S",
+    "scale_badge": "🏛️ 中国东方资产管理 · 行业领航企业 / 规范福利与广阔晋升通道",
+    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
+    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
+    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】中国东方资产管理 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
+    "date_released": "2026-08-17",
+    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
+    "is_featured": true,
+    "is_mt": false,
+    "is_foreign": false,
+    "jd": {
+      "responsibilities": [
+        "参与 2027年度校园招聘（金融类多岗位） 核心板块的业务推进、数据分析与策略执行；",
+        "协同跨职能团队推进关键项目目标达成。"
+      ],
+      "requirements": [
+        "2026/2027届应届毕业生，硕士及以上学历优先；",
+        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
+      ],
+      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
+      "ats_keywords": [
+        "中国东方资产管理",
+        "2027校招",
+        "管培生",
+        "业务运营",
+        "项目企划"
+      ]
+    }
+  },
+  {
+    "id": "中国人民保险人保_2027年度校园招聘保险_正式批",
+    "company": "中国人民保险（人保）",
+    "industry": "央国企",
+    "module": "央国企龙头",
+    "recommended_module": "央国企龙头",
+    "cohort": "2027届",
+    "batch": "正式批",
+    "positions": [
+      "2027年度校园招聘（保险",
+      "科技",
+      "职能多岗位）"
+    ],
+    "locations": [
+      "全国多中心/重点城市可选"
+    ],
+    "deadline": "2027-04-25",
+    "apply_url": "https://www.iguopin.com",
+    "announcement_url": "https://www.iguopin.com",
+    "announcement_title": "中国人民保险（人保） 2027届秋招公告 (官方直聘更新)",
+    "tier": "S",
+    "scale_badge": "🏛️ 中国人民保险（人保） · 行业领航企业 / 规范福利与广阔晋升通道",
+    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
+    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
+    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】中国人民保险（人保） 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
+    "date_released": "2026-08-01",
+    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
+    "is_featured": true,
+    "is_mt": false,
+    "is_foreign": false,
+    "jd": {
+      "responsibilities": [
+        "参与 2027年度校园招聘（保险 核心板块的业务推进、数据分析与策略执行；",
+        "协同跨职能团队推进关键项目目标达成。"
+      ],
+      "requirements": [
+        "2026/2027届应届毕业生，硕士及以上学历优先；",
+        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
+      ],
+      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
+      "ats_keywords": [
+        "中国人民保险（人保）",
+        "2027校招",
+        "管培生",
+        "业务运营",
+        "项目企划"
+      ]
+    }
+  },
+  {
+    "id": "光大证券_2027校园招聘金融_正式批",
+    "company": "光大证券",
+    "industry": "央国企",
+    "module": "全品类头部大厂",
+    "recommended_module": "全品类头部大厂",
+    "cohort": "2027届",
+    "batch": "正式批",
+    "positions": [
+      "2027校园招聘（金融",
+      "研究",
+      "科技岗）"
+    ],
+    "locations": [
+      "全国多中心/重点城市可选"
+    ],
+    "deadline": "2026-09-06",
+    "apply_url": "https://www.iguopin.com",
+    "announcement_url": "https://www.iguopin.com",
+    "announcement_title": "光大证券 2027届秋招公告 (官方直聘更新)",
+    "tier": "A",
+    "scale_badge": "🏛️ 光大证券 · 行业领航企业 / 规范福利与广阔晋升通道",
+    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
+    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
+    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】光大证券 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
+    "date_released": "2026-08-10",
+    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
+    "is_featured": false,
+    "is_mt": false,
+    "is_foreign": false,
+    "jd": {
+      "responsibilities": [
+        "参与 2027校园招聘（金融 核心板块的业务推进、数据分析与策略执行；",
+        "协同跨职能团队推进关键项目目标达成。"
+      ],
+      "requirements": [
+        "2026/2027届应届毕业生，硕士及以上学历优先；",
+        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
+      ],
+      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
+      "ats_keywords": [
+        "光大证券",
+        "2027校招",
+        "管培生",
+        "业务运营",
+        "项目企划"
+      ]
+    }
+  },
+  {
+    "id": "中泰证券_2027秋季校园招聘_提前批",
+    "company": "中泰证券",
+    "industry": "央国企",
+    "module": "全品类头部大厂",
+    "recommended_module": "全品类头部大厂",
+    "cohort": "2027届",
+    "batch": "提前批",
+    "positions": [
+      "2027秋季校园招聘"
+    ],
+    "locations": [
+      "全国多中心/重点城市可选"
+    ],
+    "deadline": "2026-08-06",
+    "apply_url": "https://www.iguopin.com",
+    "announcement_url": "https://www.iguopin.com",
+    "announcement_title": "中泰证券 2027届秋招公告 (官方直聘更新)",
+    "tier": "A",
+    "scale_badge": "🏛️ 中泰证券 · 行业领航企业 / 规范福利与广阔晋升通道",
+    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
+    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
+    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】中泰证券 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
+    "date_released": "2026-08-01",
+    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
+    "is_featured": false,
+    "is_mt": false,
+    "is_foreign": false,
+    "jd": {
+      "responsibilities": [
+        "参与 2027秋季校园招聘 核心板块的业务推进、数据分析与策略执行；",
+        "协同跨职能团队推进关键项目目标达成。"
+      ],
+      "requirements": [
+        "2026/2027届应届毕业生，硕士及以上学历优先；",
+        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
+      ],
+      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
+      "ats_keywords": [
+        "中泰证券",
+        "2027校招",
+        "管培生",
+        "业务运营",
+        "项目企划"
+      ]
+    }
+  },
+  {
+    "id": "平安银行_2027秋季校园招聘科技_正式批",
+    "company": "平安银行",
     "industry": "央国企",
     "module": "全品类头部大厂",
     "recommended_module": "全品类头部大厂",
@@ -205,22 +835,22 @@
     "batch": "正式批",
     "positions": [
       "2027秋季校园招聘（科技",
-      "研发方向",
-      "金融科技岗）"
+      "业务",
+      "职能）"
     ],
     "locations": [
       "全国多中心/重点城市可选"
     ],
-    "deadline": "2026-09-20",
-    "apply_url": "https://career.cmbchina.com",
-    "announcement_url": "https://career.cmbchina.com",
-    "announcement_title": "招商银行·招银网络科技 2027届秋招公告 (官方直聘更新)",
+    "deadline": "2026-11-06",
+    "apply_url": "https://www.iguopin.com",
+    "announcement_url": "https://www.iguopin.com",
+    "announcement_title": "平安银行 2027届秋招公告 (官方直聘更新)",
     "tier": "A",
-    "scale_badge": "🏛️ 招商银行·招银网络科技 · 行业领航企业 / 规范福利与广阔晋升通道",
+    "scale_badge": "🏛️ 平安银行 · 行业领航企业 / 规范福利与广阔晋升通道",
     "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
     "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
-    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】招商银行·招银网络科技 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
-    "date_released": "2026-07-30",
+    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】平安银行 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
+    "date_released": "2026-08-10",
     "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
     "is_featured": false,
     "is_mt": false,
@@ -236,7 +866,7 @@
       ],
       "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
       "ats_keywords": [
-        "招商银行·招银网络科技",
+        "平安银行",
         "2027校招",
         "管培生",
         "业务运营",
@@ -245,136 +875,38 @@
     }
   },
   {
-    "id": "中国工商银行_2027年度校园招聘总行及境内分行_正式批",
-    "company": "中国工商银行",
+    "id": "国家电网_2027第一批电工类为主_一批未发布",
+    "company": "国家电网",
     "industry": "央国企",
     "module": "央国企龙头",
     "recommended_module": "央国企龙头",
-    "cohort": "2027届（2026届未就业亦可）",
-    "batch": "正式批",
+    "cohort": "2027届（电工类专科及以上，其他本科及以上）",
+    "batch": "一批（未发布）",
     "positions": [
-      "2027年度校园招聘（总行及境内分行",
-      "管培",
-      "科技菁英"
+      "2027第一批（电工类为主",
+      "覆盖市局县局",
+      "含电子信息"
     ],
     "locations": [
       "全国多中心/重点城市可选"
     ],
-    "deadline": "2026-10-08",
-    "apply_url": "https://job.icbc.com.cn",
-    "announcement_url": "https://job.icbc.com.cn",
-    "announcement_title": "中国工商银行 2027届秋招公告 (官方直聘更新)",
+    "deadline": "2026-11-30",
+    "apply_url": "https://zhaopin.sgcc.com.cn/",
+    "announcement_url": "https://zhaopin.sgcc.com.cn/",
+    "announcement_title": "国家电网 2027届秋招公告 (官方直聘更新)",
     "tier": "S",
-    "scale_badge": "🏛️ 中国工商银行 · 行业领航企业 / 规范福利与广阔晋升通道",
+    "scale_badge": "🏛️ 国家电网 · 行业领航企业 / 规范福利与广阔晋升通道",
     "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
     "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
-    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】中国工商银行 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
-    "date_released": "2026-09-04",
-    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
-    "is_featured": true,
-    "is_mt": true,
-    "is_foreign": false,
-    "jd": {
-      "responsibilities": [
-        "参与 2027年度校园招聘（总行及境内分行 核心板块的业务推进、数据分析与策略执行；",
-        "协同跨职能团队推进关键项目目标达成。"
-      ],
-      "requirements": [
-        "2026/2027届应届毕业生，硕士及以上学历优先；",
-        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
-      ],
-      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
-      "ats_keywords": [
-        "中国工商银行",
-        "2027校招",
-        "管培生",
-        "业务运营",
-        "项目企划"
-      ]
-    }
-  },
-  {
-    "id": "中国农业银行_2027年度校园招聘总行_正式批",
-    "company": "中国农业银行",
-    "industry": "央国企",
-    "module": "央国企龙头",
-    "recommended_module": "央国企龙头",
-    "cohort": "2027届（2026届未就业亦可）",
-    "batch": "正式批",
-    "positions": [
-      "2027年度校园招聘（总行",
-      "境内分行",
-      "子公司"
-    ],
-    "locations": [
-      "全国多中心/重点城市可选"
-    ],
-    "deadline": "2026-10-08",
-    "apply_url": "https://career.abchina.com.cn",
-    "announcement_url": "https://career.abchina.com.cn",
-    "announcement_title": "中国农业银行 2027届秋招公告 (官方直聘更新)",
-    "tier": "S",
-    "scale_badge": "🏛️ 中国农业银行 · 行业领航企业 / 规范福利与广阔晋升通道",
-    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
-    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
-    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】中国农业银行 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
-    "date_released": "2026-09-04",
-    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
-    "is_featured": true,
-    "is_mt": true,
-    "is_foreign": false,
-    "jd": {
-      "responsibilities": [
-        "参与 2027年度校园招聘（总行 核心板块的业务推进、数据分析与策略执行；",
-        "协同跨职能团队推进关键项目目标达成。"
-      ],
-      "requirements": [
-        "2026/2027届应届毕业生，硕士及以上学历优先；",
-        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
-      ],
-      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
-      "ats_keywords": [
-        "中国农业银行",
-        "2027校招",
-        "管培生",
-        "业务运营",
-        "项目企划"
-      ]
-    }
-  },
-  {
-    "id": "中国银行_2027年全球校园招聘总行_正式批",
-    "company": "中国银行",
-    "industry": "央国企",
-    "module": "央国企龙头",
-    "recommended_module": "央国企龙头",
-    "cohort": "2027届（2026届未就业亦可）",
-    "batch": "正式批",
-    "positions": [
-      "2027年全球校园招聘（总行",
-      "境内分行",
-      "海外及综合经营公司）"
-    ],
-    "locations": [
-      "全国多中心/重点城市可选"
-    ],
-    "deadline": "2026-10-09",
-    "apply_url": "https://www.boc.cn/",
-    "announcement_url": "https://www.boc.cn/",
-    "announcement_title": "中国银行 2027届秋招公告 (官方直聘更新)",
-    "tier": "S",
-    "scale_badge": "🏛️ 中国银行 · 行业领航企业 / 规范福利与广阔晋升通道",
-    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
-    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
-    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】中国银行 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
-    "date_released": "2026-09-03",
+    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】国家电网 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
+    "date_released": "2026-10-24",
     "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
     "is_featured": true,
     "is_mt": false,
     "is_foreign": false,
     "jd": {
       "responsibilities": [
-        "参与 2027年全球校园招聘（总行 核心板块的业务推进、数据分析与策略执行；",
+        "参与 2027第一批（电工类为主 核心板块的业务推进、数据分析与策略执行；",
         "协同跨职能团队推进关键项目目标达成。"
       ],
       "requirements": [
@@ -383,7 +915,7 @@
       ],
       "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
       "ats_keywords": [
-        "中国银行",
+        "国家电网",
         "2027校招",
         "管培生",
         "业务运营",
@@ -392,702 +924,30 @@
     }
   },
   {
-    "id": "中国建设银行_2027年度校园招聘总行直属机构_正式批",
-    "company": "中国建设银行",
-    "industry": "央国企",
-    "module": "央国企龙头",
-    "recommended_module": "央国企龙头",
-    "cohort": "2027届（2026届未就业亦可）",
-    "batch": "正式批",
-    "positions": [
-      "2027年度校园招聘（总行直属机构",
-      "各省市分行）"
-    ],
-    "locations": [
-      "全国多中心/重点城市可选"
-    ],
-    "deadline": "2026-10-08",
-    "apply_url": "http://job.ccb.com",
-    "announcement_url": "http://job.ccb.com",
-    "announcement_title": "中国建设银行 2027届秋招公告 (官方直聘更新)",
-    "tier": "S",
-    "scale_badge": "🏛️ 中国建设银行 · 行业领航企业 / 规范福利与广阔晋升通道",
-    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
-    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
-    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】中国建设银行 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
-    "date_released": "2026-09-04",
-    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
-    "is_featured": true,
-    "is_mt": false,
-    "is_foreign": false,
-    "jd": {
-      "responsibilities": [
-        "参与 2027年度校园招聘（总行直属机构 核心板块的业务推进、数据分析与策略执行；",
-        "协同跨职能团队推进关键项目目标达成。"
-      ],
-      "requirements": [
-        "2026/2027届应届毕业生，硕士及以上学历优先；",
-        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
-      ],
-      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
-      "ats_keywords": [
-        "中国建设银行",
-        "2027校招",
-        "管培生",
-        "业务运营",
-        "项目企划"
-      ]
-    }
-  },
-  {
-    "id": "交通银行_2027届校园招聘总行_正式批",
-    "company": "交通银行",
-    "industry": "央国企",
-    "module": "央国企龙头",
-    "recommended_module": "央国企龙头",
-    "cohort": "2027届（2026届未就业亦可）",
-    "batch": "正式批",
-    "positions": [
-      "2027届校园招聘（总行",
-      "境内分行",
-      "子公司"
-    ],
-    "locations": [
-      "全国多中心/重点城市可选"
-    ],
-    "deadline": "2026-10-12",
-    "apply_url": "https://job.bankcomm.com/",
-    "announcement_url": "https://job.bankcomm.com/",
-    "announcement_title": "交通银行 2027届秋招公告 (官方直聘更新)",
-    "tier": "S",
-    "scale_badge": "🏛️ 交通银行 · 行业领航企业 / 规范福利与广阔晋升通道",
-    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
-    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
-    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】交通银行 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
-    "date_released": "2026-09-05",
-    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
-    "is_featured": true,
-    "is_mt": false,
-    "is_foreign": false,
-    "jd": {
-      "responsibilities": [
-        "参与 2027届校园招聘（总行 核心板块的业务推进、数据分析与策略执行；",
-        "协同跨职能团队推进关键项目目标达成。"
-      ],
-      "requirements": [
-        "2026/2027届应届毕业生，硕士及以上学历优先；",
-        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
-      ],
-      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
-      "ats_keywords": [
-        "交通银行",
-        "2027校招",
-        "管培生",
-        "业务运营",
-        "项目企划"
-      ]
-    }
-  },
-  {
-    "id": "中国邮政储蓄银行_2027届校园招聘总行_正式批",
-    "company": "中国邮政储蓄银行",
-    "industry": "央国企",
-    "module": "央国企龙头",
-    "recommended_module": "央国企龙头",
-    "cohort": "2027届（2026届未就业亦可）",
-    "batch": "正式批",
-    "positions": [
-      "2027届校园招聘（总行",
-      "各分行",
-      "控股子公司"
-    ],
-    "locations": [
-      "全国多中心/重点城市可选"
-    ],
-    "deadline": "2026-09-30",
-    "apply_url": "https://www.psbc.com",
-    "announcement_url": "https://www.psbc.com",
-    "announcement_title": "中国邮政储蓄银行 2027届秋招公告 (官方直聘更新)",
-    "tier": "S",
-    "scale_badge": "🏛️ 中国邮政储蓄银行 · 行业领航企业 / 规范福利与广阔晋升通道",
-    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
-    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
-    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】中国邮政储蓄银行 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
-    "date_released": "2026-09-01",
-    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
-    "is_featured": true,
-    "is_mt": true,
-    "is_foreign": false,
-    "jd": {
-      "responsibilities": [
-        "参与 2027届校园招聘（总行 核心板块的业务推进、数据分析与策略执行；",
-        "协同跨职能团队推进关键项目目标达成。"
-      ],
-      "requirements": [
-        "2026/2027届应届毕业生，硕士及以上学历优先；",
-        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
-      ],
-      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
-      "ats_keywords": [
-        "中国邮政储蓄银行",
-        "2027校招",
-        "管培生",
-        "业务运营",
-        "项目企划"
-      ]
-    }
-  },
-  {
-    "id": "中国核电_2027届校园招聘国企_正式批",
-    "company": "中国核电",
+    "id": "国家能源集团_2027校园招聘电力电气_正式批",
+    "company": "国家能源集团",
     "industry": "央国企",
     "module": "央国企龙头",
     "recommended_module": "央国企龙头",
     "cohort": "2027届",
     "batch": "正式批",
     "positions": [
-      "2027届校园招聘（国企",
-      "中核集团旗下）"
+      "2027校园招聘（电力电气",
+      "煤炭",
+      "化工机械数字化"
     ],
     "locations": [
       "全国多中心/重点城市可选"
     ],
-    "deadline": "2026-11-30",
-    "apply_url": "https://www.iguopin.com",
-    "announcement_url": "https://www.iguopin.com",
-    "announcement_title": "中国核电 2027届秋招公告 (官方直聘更新)",
+    "deadline": "2026-10-07",
+    "apply_url": "https://zhaopin.chnenergy.com.cn/",
+    "announcement_url": "https://zhaopin.chnenergy.com.cn/",
+    "announcement_title": "国家能源集团 2027届秋招公告 (官方直聘更新)",
     "tier": "S",
-    "scale_badge": "🏛️ 中国核电 · 行业领航企业 / 规范福利与广阔晋升通道",
+    "scale_badge": "🏛️ 国家能源集团 · 行业领航企业 / 规范福利与广阔晋升通道",
     "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
     "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
-    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】中国核电 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
-    "date_released": "2026-09-05",
-    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
-    "is_featured": true,
-    "is_mt": false,
-    "is_foreign": false,
-    "jd": {
-      "responsibilities": [
-        "参与 2027届校园招聘（国企 核心板块的业务推进、数据分析与策略执行；",
-        "协同跨职能团队推进关键项目目标达成。"
-      ],
-      "requirements": [
-        "2026/2027届应届毕业生，硕士及以上学历优先；",
-        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
-      ],
-      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
-      "ats_keywords": [
-        "中国核电",
-        "2027校招",
-        "管培生",
-        "业务运营",
-        "项目企划"
-      ]
-    }
-  },
-  {
-    "id": "中信银行_2027年校园招聘科技_正式批",
-    "company": "中信银行",
-    "industry": "央国企",
-    "module": "全品类头部大厂",
-    "recommended_module": "全品类头部大厂",
-    "cohort": "2027届",
-    "batch": "正式批",
-    "positions": [
-      "2027年校园招聘（科技",
-      "业务",
-      "职能）"
-    ],
-    "locations": [
-      "全国多中心/重点城市可选"
-    ],
-    "deadline": "2026-11-30",
-    "apply_url": "https://www.iguopin.com",
-    "announcement_url": "https://www.iguopin.com",
-    "announcement_title": "中信银行 2027届秋招公告 (官方直聘更新)",
-    "tier": "A",
-    "scale_badge": "🏛️ 中信银行 · 行业领航企业 / 规范福利与广阔晋升通道",
-    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
-    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
-    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】中信银行 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
-    "date_released": "2026-09-05",
-    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
-    "is_featured": false,
-    "is_mt": false,
-    "is_foreign": false,
-    "jd": {
-      "responsibilities": [
-        "参与 2027年校园招聘（科技 核心板块的业务推进、数据分析与策略执行；",
-        "协同跨职能团队推进关键项目目标达成。"
-      ],
-      "requirements": [
-        "2026/2027届应届毕业生，硕士及以上学历优先；",
-        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
-      ],
-      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
-      "ats_keywords": [
-        "中信银行",
-        "2027校招",
-        "管培生",
-        "业务运营",
-        "项目企划"
-      ]
-    }
-  },
-  {
-    "id": "中国兵器集团_2027届全球校园招聘_正式批",
-    "company": "中国兵器集团",
-    "industry": "央国企",
-    "module": "央国企龙头",
-    "recommended_module": "央国企龙头",
-    "cohort": "2027届",
-    "batch": "正式批",
-    "positions": [
-      "2027届全球校园招聘"
-    ],
-    "locations": [
-      "全国多中心/重点城市可选"
-    ],
-    "deadline": "2026-11-30",
-    "apply_url": "https://www.iguopin.com",
-    "announcement_url": "https://www.iguopin.com",
-    "announcement_title": "中国兵器集团 2027届秋招公告 (官方直聘更新)",
-    "tier": "S",
-    "scale_badge": "🏛️ 中国兵器集团 · 行业领航企业 / 规范福利与广阔晋升通道",
-    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
-    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
-    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】中国兵器集团 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
-    "date_released": "2026-09-05",
-    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
-    "is_featured": true,
-    "is_mt": false,
-    "is_foreign": false,
-    "jd": {
-      "responsibilities": [
-        "参与 2027届全球校园招聘 核心板块的业务推进、数据分析与策略执行；",
-        "协同跨职能团队推进关键项目目标达成。"
-      ],
-      "requirements": [
-        "2026/2027届应届毕业生，硕士及以上学历优先；",
-        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
-      ],
-      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
-      "ats_keywords": [
-        "中国兵器集团",
-        "2027校招",
-        "管培生",
-        "业务运营",
-        "项目企划"
-      ]
-    }
-  },
-  {
-    "id": "中国一汽_2027届校园招聘_正式批",
-    "company": "中国一汽",
-    "industry": "央国企",
-    "module": "央国企龙头",
-    "recommended_module": "央国企龙头",
-    "cohort": "2027届",
-    "batch": "正式批",
-    "positions": [
-      "2027届校园招聘"
-    ],
-    "locations": [
-      "全国多中心/重点城市可选"
-    ],
-    "deadline": "2026-11-30",
-    "apply_url": "https://www.iguopin.com",
-    "announcement_url": "https://www.iguopin.com",
-    "announcement_title": "中国一汽 2027届秋招公告 (官方直聘更新)",
-    "tier": "S",
-    "scale_badge": "🏛️ 中国一汽 · 行业领航企业 / 规范福利与广阔晋升通道",
-    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
-    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
-    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】中国一汽 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
-    "date_released": "2026-09-05",
-    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
-    "is_featured": true,
-    "is_mt": false,
-    "is_foreign": false,
-    "jd": {
-      "responsibilities": [
-        "参与 2027届校园招聘 核心板块的业务推进、数据分析与策略执行；",
-        "协同跨职能团队推进关键项目目标达成。"
-      ],
-      "requirements": [
-        "2026/2027届应届毕业生，硕士及以上学历优先；",
-        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
-      ],
-      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
-      "ats_keywords": [
-        "中国一汽",
-        "2027校招",
-        "管培生",
-        "业务运营",
-        "项目企划"
-      ]
-    }
-  },
-  {
-    "id": "中交集团_2027届全球校园招聘_正式批",
-    "company": "中交集团",
-    "industry": "央国企",
-    "module": "央国企龙头",
-    "recommended_module": "央国企龙头",
-    "cohort": "2027届",
-    "batch": "正式批",
-    "positions": [
-      "2027届全球校园招聘"
-    ],
-    "locations": [
-      "全国多中心/重点城市可选"
-    ],
-    "deadline": "2026-11-30",
-    "apply_url": "https://www.iguopin.com",
-    "announcement_url": "https://www.iguopin.com",
-    "announcement_title": "中交集团 2027届秋招公告 (官方直聘更新)",
-    "tier": "S",
-    "scale_badge": "🏛️ 中交集团 · 行业领航企业 / 规范福利与广阔晋升通道",
-    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
-    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
-    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】中交集团 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
-    "date_released": "2026-09-05",
-    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
-    "is_featured": true,
-    "is_mt": false,
-    "is_foreign": false,
-    "jd": {
-      "responsibilities": [
-        "参与 2027届全球校园招聘 核心板块的业务推进、数据分析与策略执行；",
-        "协同跨职能团队推进关键项目目标达成。"
-      ],
-      "requirements": [
-        "2026/2027届应届毕业生，硕士及以上学历优先；",
-        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
-      ],
-      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
-      "ats_keywords": [
-        "中交集团",
-        "2027校招",
-        "管培生",
-        "业务运营",
-        "项目企划"
-      ]
-    }
-  },
-  {
-    "id": "长安汽车_2027全球校园招聘_正式批",
-    "company": "长安汽车",
-    "industry": "央国企",
-    "module": "全品类头部大厂",
-    "recommended_module": "全品类头部大厂",
-    "cohort": "2027届",
-    "batch": "正式批",
-    "positions": [
-      "2027全球校园招聘"
-    ],
-    "locations": [
-      "全国多中心/重点城市可选"
-    ],
-    "deadline": "2026-11-30",
-    "apply_url": "https://www.iguopin.com",
-    "announcement_url": "https://www.iguopin.com",
-    "announcement_title": "长安汽车 2027届秋招公告 (官方直聘更新)",
-    "tier": "A",
-    "scale_badge": "🏛️ 长安汽车 · 行业领航企业 / 规范福利与广阔晋升通道",
-    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
-    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
-    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】长安汽车 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
-    "date_released": "2026-09-05",
-    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
-    "is_featured": false,
-    "is_mt": false,
-    "is_foreign": false,
-    "jd": {
-      "responsibilities": [
-        "参与 2027全球校园招聘 核心板块的业务推进、数据分析与策略执行；",
-        "协同跨职能团队推进关键项目目标达成。"
-      ],
-      "requirements": [
-        "2026/2027届应届毕业生，硕士及以上学历优先；",
-        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
-      ],
-      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
-      "ats_keywords": [
-        "长安汽车",
-        "2027校招",
-        "管培生",
-        "业务运营",
-        "项目企划"
-      ]
-    }
-  },
-  {
-    "id": "华润置地_2027届校园招聘_正式批",
-    "company": "华润置地",
-    "industry": "央国企",
-    "module": "全品类头部大厂",
-    "recommended_module": "全品类头部大厂",
-    "cohort": "2027届",
-    "batch": "正式批",
-    "positions": [
-      "2027届校园招聘"
-    ],
-    "locations": [
-      "全国多中心/重点城市可选"
-    ],
-    "deadline": "2026-11-30",
-    "apply_url": "https://crland.zhiye.com/Campus",
-    "announcement_url": "https://crland.zhiye.com/Campus",
-    "announcement_title": "华润置地 2027届秋招公告 (官方直聘更新)",
-    "tier": "A",
-    "scale_badge": "🏛️ 华润置地 · 行业领航企业 / 规范福利与广阔晋升通道",
-    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
-    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
-    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】华润置地 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
-    "date_released": "2026-09-05",
-    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
-    "is_featured": false,
-    "is_mt": false,
-    "is_foreign": false,
-    "jd": {
-      "responsibilities": [
-        "参与 2027届校园招聘 核心板块的业务推进、数据分析与策略执行；",
-        "协同跨职能团队推进关键项目目标达成。"
-      ],
-      "requirements": [
-        "2026/2027届应届毕业生，硕士及以上学历优先；",
-        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
-      ],
-      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
-      "ats_keywords": [
-        "华润置地",
-        "2027校招",
-        "管培生",
-        "业务运营",
-        "项目企划"
-      ]
-    }
-  },
-  {
-    "id": "招商蛇口_2027届校园招聘_正式批",
-    "company": "招商蛇口",
-    "industry": "央国企",
-    "module": "全品类头部大厂",
-    "recommended_module": "全品类头部大厂",
-    "cohort": "2027届",
-    "batch": "正式批",
-    "positions": [
-      "2027届校园招聘"
-    ],
-    "locations": [
-      "全国多中心/重点城市可选"
-    ],
-    "deadline": "2026-11-30",
-    "apply_url": "https://cmsk1979.zhiye.com/",
-    "announcement_url": "https://cmsk1979.zhiye.com/",
-    "announcement_title": "招商蛇口 2027届秋招公告 (官方直聘更新)",
-    "tier": "A",
-    "scale_badge": "🏛️ 招商蛇口 · 行业领航企业 / 规范福利与广阔晋升通道",
-    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
-    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
-    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】招商蛇口 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
-    "date_released": "2026-09-05",
-    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
-    "is_featured": false,
-    "is_mt": false,
-    "is_foreign": false,
-    "jd": {
-      "responsibilities": [
-        "参与 2027届校园招聘 核心板块的业务推进、数据分析与策略执行；",
-        "协同跨职能团队推进关键项目目标达成。"
-      ],
-      "requirements": [
-        "2026/2027届应届毕业生，硕士及以上学历优先；",
-        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
-      ],
-      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
-      "ats_keywords": [
-        "招商蛇口",
-        "2027校招",
-        "管培生",
-        "业务运营",
-        "项目企划"
-      ]
-    }
-  },
-  {
-    "id": "中信集团_2027年度校园招聘集团总部管理培训生_正式批",
-    "company": "中信集团",
-    "industry": "央国企",
-    "module": "全品类头部大厂",
-    "recommended_module": "全品类头部大厂",
-    "cohort": "2027届（2027.7.31前取得学历学位的硕博为主，含2026.1-2027.7归国留学生）",
-    "batch": "正式批",
-    "positions": [
-      "2027年度校园招聘（集团总部管理培训生",
-      "综合金融",
-      "先进智造"
-    ],
-    "locations": [
-      "全国多中心/重点城市可选"
-    ],
-    "deadline": "2026-10-08",
-    "apply_url": "https://job.citic.com",
-    "announcement_url": "https://job.citic.com",
-    "announcement_title": "中信集团 2027届秋招公告 (官方直聘更新)",
-    "tier": "A",
-    "scale_badge": "🏛️ 中信集团 · 行业领航企业 / 规范福利与广阔晋升通道",
-    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
-    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
-    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】中信集团 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
-    "date_released": "2026-09-01",
-    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
-    "is_featured": false,
-    "is_mt": false,
-    "is_foreign": false,
-    "jd": {
-      "responsibilities": [
-        "参与 2027年度校园招聘（集团总部管理培训生 核心板块的业务推进、数据分析与策略执行；",
-        "协同跨职能团队推进关键项目目标达成。"
-      ],
-      "requirements": [
-        "2026/2027届应届毕业生，硕士及以上学历优先；",
-        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
-      ],
-      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
-      "ats_keywords": [
-        "中信集团",
-        "2027校招",
-        "管培生",
-        "业务运营",
-        "项目企划"
-      ]
-    }
-  },
-  {
-    "id": "中国航空工业集团_2027届校园招聘研发_正式批",
-    "company": "中国航空工业集团",
-    "industry": "央国企",
-    "module": "央国企龙头",
-    "recommended_module": "央国企龙头",
-    "cohort": "2027届（理工科为主）",
-    "batch": "正式批",
-    "positions": [
-      "2027届校园招聘（研发",
-      "技术",
-      "职能等多方向）"
-    ],
-    "locations": [
-      "全国多中心/重点城市可选"
-    ],
-    "deadline": "2026-11-30",
-    "apply_url": "https://www.avic.com.cn",
-    "announcement_url": "https://www.avic.com.cn",
-    "announcement_title": "中国航空工业集团 2027届秋招公告 (官方直聘更新)",
-    "tier": "S",
-    "scale_badge": "🏛️ 中国航空工业集团 · 行业领航企业 / 规范福利与广阔晋升通道",
-    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
-    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
-    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】中国航空工业集团 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
-    "date_released": "2026-09-01",
-    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
-    "is_featured": true,
-    "is_mt": false,
-    "is_foreign": false,
-    "jd": {
-      "responsibilities": [
-        "参与 2027届校园招聘（研发 核心板块的业务推进、数据分析与策略执行；",
-        "协同跨职能团队推进关键项目目标达成。"
-      ],
-      "requirements": [
-        "2026/2027届应届毕业生，硕士及以上学历优先；",
-        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
-      ],
-      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
-      "ats_keywords": [
-        "中国航空工业集团",
-        "2027校招",
-        "管培生",
-        "业务运营",
-        "项目企划"
-      ]
-    }
-  },
-  {
-    "id": "航空工业沈飞_2027届校园招聘航空研发_正式批",
-    "company": "航空工业沈飞",
-    "industry": "央国企",
-    "module": "全品类头部大厂",
-    "recommended_module": "全品类头部大厂",
-    "cohort": "2027届（理工科为主）",
-    "batch": "正式批",
-    "positions": [
-      "2027届校园招聘（航空研发",
-      "技术",
-      "制造方向）"
-    ],
-    "locations": [
-      "全国多中心/重点城市可选"
-    ],
-    "deadline": "2026-11-30",
-    "apply_url": "https://www.avic.com.cn",
-    "announcement_url": "https://www.avic.com.cn",
-    "announcement_title": "航空工业沈飞 2027届秋招公告 (官方直聘更新)",
-    "tier": "A",
-    "scale_badge": "🏛️ 航空工业沈飞 · 行业领航企业 / 规范福利与广阔晋升通道",
-    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
-    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
-    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】航空工业沈飞 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
-    "date_released": "2026-09-01",
-    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
-    "is_featured": false,
-    "is_mt": false,
-    "is_foreign": false,
-    "jd": {
-      "responsibilities": [
-        "参与 2027届校园招聘（航空研发 核心板块的业务推进、数据分析与策略执行；",
-        "协同跨职能团队推进关键项目目标达成。"
-      ],
-      "requirements": [
-        "2026/2027届应届毕业生，硕士及以上学历优先；",
-        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
-      ],
-      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
-      "ats_keywords": [
-        "航空工业沈飞",
-        "2027校招",
-        "管培生",
-        "业务运营",
-        "项目企划"
-      ]
-    }
-  },
-  {
-    "id": "中电信量子集团_2027校园招聘量子通信_正式批",
-    "company": "中电信量子集团",
-    "industry": "央国企",
-    "module": "央国企龙头",
-    "recommended_module": "央国企龙头",
-    "cohort": "2027届",
-    "batch": "正式批",
-    "positions": [
-      "2027校园招聘（量子通信",
-      "网络安全",
-      "研发方向）"
-    ],
-    "locations": [
-      "全国多中心/重点城市可选"
-    ],
-    "deadline": "2026-11-30",
-    "apply_url": "https://www.chinatelecom.com.cn/zp/",
-    "announcement_url": "https://www.chinatelecom.com.cn/zp/",
-    "announcement_title": "中电信量子集团 2027届秋招公告 (官方直聘更新)",
-    "tier": "S",
-    "scale_badge": "🏛️ 中电信量子集团 · 行业领航企业 / 规范福利与广阔晋升通道",
-    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
-    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
-    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】中电信量子集团 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
+    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】国家能源集团 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
     "date_released": "2026-09-02",
     "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
     "is_featured": true,
@@ -1095,7 +955,7 @@
     "is_foreign": false,
     "jd": {
       "responsibilities": [
-        "参与 2027校园招聘（量子通信 核心板块的业务推进、数据分析与策略执行；",
+        "参与 2027校园招聘（电力电气 核心板块的业务推进、数据分析与策略执行；",
         "协同跨职能团队推进关键项目目标达成。"
       ],
       "requirements": [
@@ -1104,7 +964,7 @@
       ],
       "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
       "ats_keywords": [
-        "中电信量子集团",
+        "国家能源集团",
         "2027校招",
         "管培生",
         "业务运营",
@@ -1113,86 +973,37 @@
     }
   },
   {
-    "id": "国投集团国家开发投资集团_2027届校园招聘集团管培生_正式批",
-    "company": "国投集团（国家开发投资集团）",
+    "id": "中国铁路_2027校园招聘各铁路局_正式批",
+    "company": "中国铁路",
     "industry": "央国企",
     "module": "央国企龙头",
     "recommended_module": "央国企龙头",
-    "cohort": "2027届（含2026届未就业）",
+    "cohort": "2027届",
     "batch": "正式批",
     "positions": [
-      "2027届校园招聘（集团管培生",
-      "电力",
-      "港口"
+      "2027校园招聘（各铁路局",
+      "仅铁路人才网发布）"
     ],
     "locations": [
       "全国多中心/重点城市可选"
     ],
     "deadline": "2026-11-30",
-    "apply_url": "https://sdic.iguopin.com",
-    "announcement_url": "https://sdic.iguopin.com",
-    "announcement_title": "国投集团（国家开发投资集团） 2027届秋招公告 (官方直聘更新)",
+    "apply_url": "https://rczp.china-railway.com.cn",
+    "announcement_url": "https://rczp.china-railway.com.cn",
+    "announcement_title": "中国铁路 2027届秋招公告 (官方直聘更新)",
     "tier": "S",
-    "scale_badge": "🏛️ 国投集团（国家开发投资集团） · 行业领航企业 / 规范福利与广阔晋升通道",
+    "scale_badge": "🏛️ 中国铁路 · 行业领航企业 / 规范福利与广阔晋升通道",
     "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
     "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
-    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】国投集团（国家开发投资集团） 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
-    "date_released": "2026-09-06",
-    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
-    "is_featured": true,
-    "is_mt": true,
-    "is_foreign": false,
-    "jd": {
-      "responsibilities": [
-        "参与 2027届校园招聘（集团管培生 核心板块的业务推进、数据分析与策略执行；",
-        "协同跨职能团队推进关键项目目标达成。"
-      ],
-      "requirements": [
-        "2026/2027届应届毕业生，硕士及以上学历优先；",
-        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
-      ],
-      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
-      "ats_keywords": [
-        "国投集团（国家开发投资集团）",
-        "2027校招",
-        "管培生",
-        "业务运营",
-        "项目企划"
-      ]
-    }
-  },
-  {
-    "id": "中国兵器工业第二〇八研究所_2027届高校精英招募研发_正式批",
-    "company": "中国兵器工业第二〇八研究所",
-    "industry": "央国企",
-    "module": "央国企龙头",
-    "recommended_module": "央国企龙头",
-    "cohort": "2027届（理工科为主）",
-    "batch": "正式批",
-    "positions": [
-      "2027届高校精英招募（研发",
-      "技术方向）"
-    ],
-    "locations": [
-      "全国多中心/重点城市可选"
-    ],
-    "deadline": "2026-11-30",
-    "apply_url": "https://www.norincogroup.com.cn",
-    "announcement_url": "https://www.norincogroup.com.cn",
-    "announcement_title": "中国兵器工业第二〇八研究所 2027届秋招公告 (官方直聘更新)",
-    "tier": "S",
-    "scale_badge": "🏛️ 中国兵器工业第二〇八研究所 · 行业领航企业 / 规范福利与广阔晋升通道",
-    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
-    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
-    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】中国兵器工业第二〇八研究所 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
-    "date_released": "2026-09-03",
+    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】中国铁路 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
+    "date_released": "2026-10-24",
     "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
     "is_featured": true,
     "is_mt": false,
     "is_foreign": false,
     "jd": {
       "responsibilities": [
-        "参与 2027届高校精英招募（研发 核心板块的业务推进、数据分析与策略执行；",
+        "参与 2027校园招聘（各铁路局 核心板块的业务推进、数据分析与策略执行；",
         "协同跨职能团队推进关键项目目标达成。"
       ],
       "requirements": [
@@ -1201,7 +1012,7 @@
       ],
       "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
       "ats_keywords": [
-        "中国兵器工业第二〇八研究所",
+        "中国铁路",
         "2027校招",
         "管培生",
         "业务运营",
@@ -1210,38 +1021,38 @@
     }
   },
   {
-    "id": "中国邮政集团_2027届校园招聘寄递物流_正式批",
-    "company": "中国邮政集团",
+    "id": "中石油_2027校园招聘正式批_正式批",
+    "company": "中石油",
     "industry": "央国企",
     "module": "央国企龙头",
     "recommended_module": "央国企龙头",
     "cohort": "2027届（2026届未就业亦可）",
     "batch": "正式批",
     "positions": [
-      "2027届校园招聘（寄递物流",
-      "金融",
-      "信息技术"
+      "2027校园招聘（正式批",
+      "油气勘探开发",
+      "炼化"
     ],
     "locations": [
       "全国多中心/重点城市可选"
     ],
-    "deadline": "2026-10-31",
-    "apply_url": "https://zhaopin.chinapost.com.cn",
-    "announcement_url": "https://zhaopin.chinapost.com.cn",
-    "announcement_title": "中国邮政集团 2027届秋招公告 (官方直聘更新)",
+    "deadline": "2026-10-15",
+    "apply_url": "https://zhaopin.cnpc.com.cn",
+    "announcement_url": "https://zhaopin.cnpc.com.cn",
+    "announcement_title": "中石油 2027届秋招公告 (官方直聘更新)",
     "tier": "S",
-    "scale_badge": "🏛️ 中国邮政集团 · 行业领航企业 / 规范福利与广阔晋升通道",
+    "scale_badge": "🏛️ 中石油 · 行业领航企业 / 规范福利与广阔晋升通道",
     "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
     "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
-    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】中国邮政集团 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
-    "date_released": "2026-09-01",
+    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】中石油 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
+    "date_released": "2026-09-09",
     "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
     "is_featured": true,
     "is_mt": false,
     "is_foreign": false,
     "jd": {
       "responsibilities": [
-        "参与 2027届校园招聘（寄递物流 核心板块的业务推进、数据分析与策略执行；",
+        "参与 2027校园招聘（正式批 核心板块的业务推进、数据分析与策略执行；",
         "协同跨职能团队推进关键项目目标达成。"
       ],
       "requirements": [
@@ -1250,7 +1061,7 @@
       ],
       "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
       "ats_keywords": [
-        "中国邮政集团",
+        "中石油",
         "2027校招",
         "管培生",
         "业务运营",
@@ -1259,87 +1070,36 @@
     }
   },
   {
-    "id": "中国建筑中建集团_2027届校园招聘工程技术_正式批",
-    "company": "中国建筑（中建集团）",
-    "industry": "央国企",
-    "module": "央国企龙头",
-    "recommended_module": "央国企龙头",
-    "cohort": "2027届本科及以上",
-    "batch": "正式批",
-    "positions": [
-      "2027届校园招聘（工程技术",
-      "设计研发",
-      "商务运营"
-    ],
-    "locations": [
-      "全国多中心/重点城市可选"
-    ],
-    "deadline": "2026-11-30",
-    "apply_url": "https://recruit.cscec.com",
-    "announcement_url": "https://recruit.cscec.com",
-    "announcement_title": "中国建筑（中建集团） 2027届秋招公告 (官方直聘更新)",
-    "tier": "S",
-    "scale_badge": "🏛️ 中国建筑（中建集团） · 行业领航企业 / 规范福利与广阔晋升通道",
-    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
-    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
-    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】中国建筑（中建集团） 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
-    "date_released": "2026-09-01",
-    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
-    "is_featured": true,
-    "is_mt": false,
-    "is_foreign": false,
-    "jd": {
-      "responsibilities": [
-        "参与 2027届校园招聘（工程技术 核心板块的业务推进、数据分析与策略执行；",
-        "协同跨职能团队推进关键项目目标达成。"
-      ],
-      "requirements": [
-        "2026/2027届应届毕业生，硕士及以上学历优先；",
-        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
-      ],
-      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
-      "ats_keywords": [
-        "中国建筑（中建集团）",
-        "2027校招",
-        "管培生",
-        "业务运营",
-        "项目企划"
-      ]
-    }
-  },
-  {
-    "id": "航天科工二院二十三所_2027届校园招聘电子_正式批",
-    "company": "航天科工二院二十三所",
+    "id": "中石化_2027校园招聘正式批_正式批",
+    "company": "中石化",
     "industry": "央国企",
     "module": "全品类头部大厂",
     "recommended_module": "全品类头部大厂",
-    "cohort": "2027届（理工科为主）",
+    "cohort": "2027届",
     "batch": "正式批",
     "positions": [
-      "2027届校园招聘（电子",
-      "通信",
-      "雷达"
+      "2027校园招聘（正式批）"
     ],
     "locations": [
       "全国多中心/重点城市可选"
     ],
-    "deadline": "2026-11-30",
-    "apply_url": "https://www.iguopin.com",
-    "announcement_url": "https://www.iguopin.com",
-    "announcement_title": "航天科工二院二十三所 2027届秋招公告 (官方直聘更新)",
+    "deadline": "2026-10-28",
+    "apply_url": "https://job.sinopec.com",
+    "announcement_url": "https://job.sinopec.com",
+    "announcement_title": "中石化 2027届秋招公告 (官方直聘更新)",
     "tier": "A",
-    "scale_badge": "🏛️ 航天科工二院二十三所 · 行业领航企业 / 规范福利与广阔晋升通道",
+    "scale_badge": "🏛️ 中石化 · 行业领航企业 / 规范福利与广阔晋升通道",
     "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
     "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
-    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】航天科工二院二十三所 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
-    "date_released": "2026-09-01",
+    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】中石化 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
+    "date_released": "2026-09-24",
     "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
     "is_featured": false,
     "is_mt": false,
     "is_foreign": false,
     "jd": {
       "responsibilities": [
-        "参与 2027届校园招聘（电子 核心板块的业务推进、数据分析与策略执行；",
+        "参与 2027校园招聘（正式批） 核心板块的业务推进、数据分析与策略执行；",
         "协同跨职能团队推进关键项目目标达成。"
       ],
       "requirements": [
@@ -1348,7 +1108,7 @@
       ],
       "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
       "ats_keywords": [
-        "航天科工二院二十三所",
+        "中石化",
         "2027校招",
         "管培生",
         "业务运营",
@@ -1357,37 +1117,87 @@
     }
   },
   {
-    "id": "中远海运船员公司_2027届航海类校园招聘航海技术_正式批",
-    "company": "中远海运船员公司",
+    "id": "航天科工_2027校园招聘正式批_正式批",
+    "company": "航天科工",
     "industry": "央国企",
-    "module": "央国企龙头",
-    "recommended_module": "央国企龙头",
-    "cohort": "2027届（航海技术/轮机工程等）",
+    "module": "全品类头部大厂",
+    "recommended_module": "全品类头部大厂",
+    "cohort": "2027届（理工科为主）",
     "batch": "正式批",
     "positions": [
-      "2027届航海类校园招聘（航海技术",
-      "轮机工程等船员岗位）"
+      "2027校园招聘（正式批",
+      "研发",
+      "技术"
     ],
     "locations": [
       "全国多中心/重点城市可选"
     ],
     "deadline": "2026-11-30",
-    "apply_url": "https://www.iguopin.com",
-    "announcement_url": "https://www.iguopin.com",
-    "announcement_title": "中远海运船员公司 2027届秋招公告 (官方直聘更新)",
-    "tier": "S",
-    "scale_badge": "🏛️ 中远海运船员公司 · 行业领航企业 / 规范福利与广阔晋升通道",
+    "apply_url": "http://casicjob.iguopin.com",
+    "announcement_url": "http://casicjob.iguopin.com",
+    "announcement_title": "航天科工 2027届秋招公告 (官方直聘更新)",
+    "tier": "A",
+    "scale_badge": "🏛️ 航天科工 · 行业领航企业 / 规范福利与广阔晋升通道",
     "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
     "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
-    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】中远海运船员公司 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
-    "date_released": "2026-09-01",
+    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】航天科工 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
+    "date_released": "2026-09-02",
+    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
+    "is_featured": false,
+    "is_mt": false,
+    "is_foreign": false,
+    "jd": {
+      "responsibilities": [
+        "参与 2027校园招聘（正式批 核心板块的业务推进、数据分析与策略执行；",
+        "协同跨职能团队推进关键项目目标达成。"
+      ],
+      "requirements": [
+        "2026/2027届应届毕业生，硕士及以上学历优先；",
+        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
+      ],
+      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
+      "ats_keywords": [
+        "航天科工",
+        "2027校招",
+        "管培生",
+        "业务运营",
+        "项目企划"
+      ]
+    }
+  },
+  {
+    "id": "中国电科_2027校园招聘电子_正式批",
+    "company": "中国电科",
+    "industry": "央国企",
+    "module": "央国企龙头",
+    "recommended_module": "央国企龙头",
+    "cohort": "2027届（研发岗硕博为主）",
+    "batch": "正式批",
+    "positions": [
+      "2027校园招聘（电子",
+      "计算机",
+      "机械"
+    ],
+    "locations": [
+      "全国多中心/重点城市可选"
+    ],
+    "deadline": "2026-11-30",
+    "apply_url": "https://cetc.iguopin.com/",
+    "announcement_url": "https://cetc.iguopin.com/",
+    "announcement_title": "中国电科 2027届秋招公告 (官方直聘更新)",
+    "tier": "S",
+    "scale_badge": "🏛️ 中国电科 · 行业领航企业 / 规范福利与广阔晋升通道",
+    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
+    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
+    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】中国电科 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
+    "date_released": "2026-09-08",
     "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
     "is_featured": true,
     "is_mt": false,
     "is_foreign": false,
     "jd": {
       "responsibilities": [
-        "参与 2027届航海类校园招聘（航海技术 核心板块的业务推进、数据分析与策略执行；",
+        "参与 2027校园招聘（电子 核心板块的业务推进、数据分析与策略执行；",
         "协同跨职能团队推进关键项目目标达成。"
       ],
       "requirements": [
@@ -1396,7 +1206,7 @@
       ],
       "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
       "ats_keywords": [
-        "中远海运船员公司",
+        "中国电科",
         "2027校招",
         "管培生",
         "业务运营",
@@ -1405,30 +1215,30 @@
     }
   },
   {
-    "id": "米哈游_2027届校园招聘程序&技术类_正式批",
-    "company": "米哈游",
-    "industry": "互联网大厂",
-    "module": "互联网大厂",
-    "recommended_module": "互联网大厂",
-    "cohort": "2027届（2026.9-2027.8毕业）",
-    "batch": "正式批",
+    "id": "浪潮集团_2027届校园招聘提前批_提前批",
+    "company": "浪潮集团",
+    "industry": "央国企",
+    "module": "全品类头部大厂",
+    "recommended_module": "全品类头部大厂",
+    "cohort": "2027届",
+    "batch": "提前批",
     "positions": [
-      "2027届校园招聘（程序&技术类",
-      "美术&表现类",
-      "产品策划类"
+      "2027届校园招聘（提前批",
+      "技术",
+      "研发方向）"
     ],
     "locations": [
       "全国多中心/重点城市可选"
     ],
     "deadline": "2026-11-30",
-    "apply_url": "https://join.mihoyo.com/",
-    "announcement_url": "https://join.mihoyo.com/",
-    "announcement_title": "米哈游 2027届秋招公告 (官方直聘更新)",
+    "apply_url": "https://www.inspur.com",
+    "announcement_url": "https://www.inspur.com",
+    "announcement_title": "浪潮集团 2027届秋招公告 (官方直聘更新)",
     "tier": "A",
-    "scale_badge": "🏛️ 米哈游 · 行业领航企业 / 规范福利与广阔晋升通道",
+    "scale_badge": "🏛️ 浪潮集团 · 行业领航企业 / 规范福利与广阔晋升通道",
     "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
     "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
-    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】米哈游 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
+    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】浪潮集团 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
     "date_released": "2026-08-05",
     "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
     "is_featured": false,
@@ -1436,7 +1246,7 @@
     "is_foreign": false,
     "jd": {
       "responsibilities": [
-        "参与 2027届校园招聘（程序&技术类 核心板块的业务推进、数据分析与策略执行；",
+        "参与 2027届校园招聘（提前批 核心板块的业务推进、数据分析与策略执行；",
         "协同跨职能团队推进关键项目目标达成。"
       ],
       "requirements": [
@@ -1445,7 +1255,202 @@
       ],
       "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
       "ats_keywords": [
-        "米哈游",
+        "浪潮集团",
+        "2027校招",
+        "管培生",
+        "业务运营",
+        "项目企划"
+      ]
+    }
+  },
+  {
+    "id": "东风汽车东风奕派_2027全球校园招聘技术_正式批",
+    "company": "东风汽车（东风奕派）",
+    "industry": "央国企",
+    "module": "全品类头部大厂",
+    "recommended_module": "全品类头部大厂",
+    "cohort": "2027届",
+    "batch": "正式批",
+    "positions": [
+      "2027全球校园招聘（技术",
+      "研发",
+      "设计"
+    ],
+    "locations": [
+      "全国多中心/重点城市可选"
+    ],
+    "deadline": "2026-11-30",
+    "apply_url": "https://www.dfmc.com.cn",
+    "announcement_url": "https://www.dfmc.com.cn",
+    "announcement_title": "东风汽车（东风奕派） 2027届秋招公告 (官方直聘更新)",
+    "tier": "A",
+    "scale_badge": "🏛️ 东风汽车（东风奕派） · 行业领航企业 / 规范福利与广阔晋升通道",
+    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
+    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
+    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】东风汽车（东风奕派） 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
+    "date_released": "2026-08-05",
+    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
+    "is_featured": false,
+    "is_mt": false,
+    "is_foreign": false,
+    "jd": {
+      "responsibilities": [
+        "参与 2027全球校园招聘（技术 核心板块的业务推进、数据分析与策略执行；",
+        "协同跨职能团队推进关键项目目标达成。"
+      ],
+      "requirements": [
+        "2026/2027届应届毕业生，硕士及以上学历优先；",
+        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
+      ],
+      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
+      "ats_keywords": [
+        "东风汽车（东风奕派）",
+        "2027校招",
+        "管培生",
+        "业务运营",
+        "项目企划"
+      ]
+    }
+  },
+  {
+    "id": "紫光国芯_2027校园招聘芯片_正式批",
+    "company": "紫光国芯",
+    "industry": "央国企",
+    "module": "央国企龙头",
+    "recommended_module": "央国企龙头",
+    "cohort": "2027届",
+    "batch": "正式批",
+    "positions": [
+      "2027校园招聘（芯片",
+      "研发方向）"
+    ],
+    "locations": [
+      "全国多中心/重点城市可选"
+    ],
+    "deadline": "2026-11-30",
+    "apply_url": "https://www.iguopin.com",
+    "announcement_url": "https://www.iguopin.com",
+    "announcement_title": "紫光国芯 2027届秋招公告 (官方直聘更新)",
+    "tier": "S",
+    "scale_badge": "🏛️ 紫光国芯 · 行业领航企业 / 规范福利与广阔晋升通道",
+    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
+    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
+    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】紫光国芯 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
+    "date_released": "2026-08-05",
+    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
+    "is_featured": true,
+    "is_mt": false,
+    "is_foreign": false,
+    "jd": {
+      "responsibilities": [
+        "参与 2027校园招聘（芯片 核心板块的业务推进、数据分析与策略执行；",
+        "协同跨职能团队推进关键项目目标达成。"
+      ],
+      "requirements": [
+        "2026/2027届应届毕业生，硕士及以上学历优先；",
+        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
+      ],
+      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
+      "ats_keywords": [
+        "紫光国芯",
+        "2027校招",
+        "管培生",
+        "业务运营",
+        "项目企划"
+      ]
+    }
+  },
+  {
+    "id": "小红书_搜索_正式批",
+    "company": "小红书",
+    "industry": "互联网大厂",
+    "module": "互联网大厂",
+    "recommended_module": "互联网大厂",
+    "cohort": "2027届（含毕业两年内技术人才）",
+    "batch": "正式批",
+    "positions": [
+      "搜索",
+      "推荐",
+      "广告"
+    ],
+    "locations": [
+      "全国多中心/重点城市可选"
+    ],
+    "deadline": "2027-06-30",
+    "apply_url": "https://job.xiaohongshu.com/campus",
+    "announcement_url": "https://job.xiaohongshu.com/campus",
+    "announcement_title": "小红书 2027届秋招公告 (官方直聘更新)",
+    "tier": "A",
+    "scale_badge": "🏛️ 小红书 · 行业领航企业 / 规范福利与广阔晋升通道",
+    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
+    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
+    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】小红书 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
+    "date_released": "2026-08-25",
+    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
+    "is_featured": false,
+    "is_mt": false,
+    "is_foreign": false,
+    "jd": {
+      "responsibilities": [
+        "参与 搜索 核心板块的业务推进、数据分析与策略执行；",
+        "协同跨职能团队推进关键项目目标达成。"
+      ],
+      "requirements": [
+        "2026/2027届应届毕业生，硕士及以上学历优先；",
+        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
+      ],
+      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
+      "ats_keywords": [
+        "小红书",
+        "2027校招",
+        "管培生",
+        "业务运营",
+        "项目企划"
+      ]
+    }
+  },
+  {
+    "id": "中国移动_技术类通信网络_正式批",
+    "company": "中国移动",
+    "industry": "央国企",
+    "module": "央国企龙头",
+    "recommended_module": "央国企龙头",
+    "cohort": "2027届（2026届未就业亦可）",
+    "batch": "正式批",
+    "positions": [
+      "技术类（通信网络",
+      "云网",
+      "AI大模型算法"
+    ],
+    "locations": [
+      "全国多中心/重点城市可选"
+    ],
+    "deadline": "2026-10-08",
+    "apply_url": "https://job.10086.cn/",
+    "announcement_url": "https://job.10086.cn/",
+    "announcement_title": "中国移动 2027届秋招公告 (官方直聘更新)",
+    "tier": "S",
+    "scale_badge": "🏛️ 中国移动 · 行业领航企业 / 规范福利与广阔晋升通道",
+    "salary_range": "💰 16w - 32w + 绩效年终 + 七险二金",
+    "interview_process": "🎯 官方直聘系统网申 ➔ 线上行测/性格测评 ➔ 专业复试 ➔ 高管终面",
+    "tips_and_pitfalls": "【针对郑大建筑专硕及通识背景】中国移动 该批次重点考查抗压执行力、商业敏感度与跨模块协同能力。",
+    "date_released": "2026-09-02",
+    "reason": "来自 2027 届校招一手实时公告，行业龙头对口首选！",
+    "is_featured": true,
+    "is_mt": false,
+    "is_foreign": false,
+    "jd": {
+      "responsibilities": [
+        "参与 技术类（通信网络 核心板块的业务推进、数据分析与策略执行；",
+        "协同跨职能团队推进关键项目目标达成。"
+      ],
+      "requirements": [
+        "2026/2027届应届毕业生，硕士及以上学历优先；",
+        "专业不限，具备严谨的逻辑分析能力与优秀的团队协同素养。"
+      ],
+      "candidate_advantage": "工科专硕对于空间全局流线与复杂项目节点规划的严密思维，完美契合业务操盘与企划需求。",
+      "ats_keywords": [
+        "中国移动",
         "2027校招",
         "管培生",
         "业务运营",
