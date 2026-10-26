@@ -240,21 +240,26 @@ def infer_salary_and_scale(company, industry, positions, tags):
         salary = "💰 18w - 32w + 商业补充医疗 + 弹性混合办公 + 国际化发展平台"
         process = "🎯 官网/网申系统 ➔ AI视频面试/性格测评 ➔ 商业模拟AC群面 ➔ 事业部高管终面"
         tips = "【外企通关】重视商业敏锐度、跨文化沟通与同理心。强调结构化英文/双语自我介绍，善用STAR法则阐述创新与领导力案例。"
-    elif "央国企" in industry or any(k in company for k in ["中建", "中铁", "中交", "华润", "保利", "国网", "电信", "移动", "中粮"]):
-        scale = "🏢 骨干央企 / 大型国企 / 世界500强"
-        salary = "💰 15w - 25w + 六险二金 + 住房补贴/宿舍 + 央企全套工会福利"
-        process = "🎯 统一网申 ➔ 统一笔试/在线行测测评 ➔ 线下综合一面 ➔ 业务二面 ➔ 体检录用"
-        tips = "【央国企通关】国企极其看重政治面貌、踏实稳重形象与抗压团队协同。面试切忌好高骛远，答题要讲求规矩与严谨闭环。"
+    elif "新能源" in industry or any(k in company for k in ["宁德时代", "比亚迪", "理想", "蔚来", "小鹏", "吉利", "极氪", "阳光电源", "汇川"]):
+        scale = "⚡ 全球新能源与智能出行龙头 / 万亿出海赛道"
+        salary = "💰 18w - 35w + 年终奖金 + 员工购车/技术补贴 + 快速股权激励"
+        process = "🎯 官网直聘 ➔ 业务初试 ➔ 关键案例方案复试 ➔ HR终面"
+        tips = "【新能源通关】重视工科综合分析与商务谈判韧性。面试结合出海大客户协同案例，突出抗压开拓能力与系统性工程思维。"
     elif "互联网" in industry or any(k in company for k in ["阿里", "腾讯", "美团", "字节", "京东", "快手", "拼多多", "小红书", "DeepSeek", "vivo"]):
         scale = "🌐 万亿/千亿级科技互联网大厂 / 核心商业闭环"
         salary = "💰 18k - 30k × 15-16薪 (年薪 28w - 45w+) + 房补餐补 + 期权激励"
         process = "🎯 官网网申 ➔ 在线测评 (认知/北森/SHL) ➔ 业务一面 ➔ 业务二面/交叉面 ➔ HRG终面"
         tips = "【大厂通关】必考数据归因（GMV、ROI、转化率漏斗）。面试追问极深，务必带上真实业务操盘思考，严禁泛泛背诵。"
-    elif "金融" in industry or "银行" in industry or any(k in company for k in ["银行", "证券"]):
-        scale = "🏢 头部金融机构 / 国有大行 / 头部股份制行"
-        salary = "💰 16w - 28w + 顶格公积金 + 丰厚节假日金 + 极高职业起点"
-        process = "🎯 统一网申 ➔ 全国机考统考 (行测+英语+经济基础) ➔ 无领导小组讨论 ➔ 结构化半结构化面试"
-        tips = "【金融通关】全国统考机考刷题是生死线，提前刷行测与综合知识！绿色金融与数字化方向极其欢迎建筑与理工科复合人才。"
+    elif "消费" in industry or any(k in company for k in ["泡泡玛特", "蜜雪冰城", "霸王茶姬", "名创优品", "农夫山泉", "卫龙", "元气森林"]):
+        scale = "🛍️ 潮流消费与品牌零售领军 / 全球化出海独角兽"
+        salary = "💰 16w - 30w + 提成奖金 + 内部新品福利 + 扁平年轻化团队"
+        process = "🎯 官方校招 ➔ 视频测评/无领导群面 ➔ 业务实操复试 ➔ 综合终面"
+        tips = "【消费零售通关】注重年轻人审美敏锐度、品牌共情力与用户增长打法。面试紧扣真实营销破圈案例，展现超越同龄人的落地执行力。"
+    elif "AI" in industry or "硬件" in industry or any(k in company for k in ["大疆", "影石", "安克创新", "宇树", "科大讯飞", "超聚变", "长鑫存储", "小米", "OPPO"]):
+        scale = "🤖 前沿硬核科技与智能硬件巨头 / 全球第一阵营"
+        salary = "💰 20w - 38w + 研发/商务专项奖 + 住房补贴 + 弹性福利"
+        process = "🎯 官方网申 ➔ 逻辑认知测评 ➔ 业务综合初面 ➔ 方案/专业复试 ➔ HR终面"
+        tips = "【AI硬件通关】硬核科技看重产品洞察、全球商业化拓展与学习自驱力。面试结合具体硬件应用场景，展示逻辑严谨的解决方案能力。"
     elif any(k in pos_str for k in ["管培", "培训生", "gmt", "uflp", "sgp", "特训生"]):
         scale = "🏢 行业龙头集团战略管培计划 / 关键核心业务梯队"
         salary = "💰 16w - 28w + 定制轮岗培养 + 高管带教 + 快速晋升通道"
@@ -346,53 +351,68 @@ def evaluate_job(job):
     pos_str = " ".join(positions).lower()
     full_str = f"{company} {industry} {pos_str}".lower()
 
+    # 0. 严格排除国企与银行类（根据求职意向明确剔除）
+    bank_kws = ["银行", "农信", "城商行", "农商行", "信用社", "证券", "信托", "保理", "银联", "中信证券", "华泰证券", "广发证券", "招商证券", "海通证券", "申万"]
+    soe_kws = [
+        "央企", "国企", "中建", "中铁", "中交", "中铁建", "中能建", "电建", "中国建筑",
+        "保利", "金茂", "华润置地", "中国建研院", "建研院", "国家电网", "南方电网",
+        "中国电信", "中国移动", "中国联通", "中国石化", "中国石油", "中国海油",
+        "中粮", "中化", "中国远洋", "中国绿发", "国家能源", "华能", "大唐", "国电投",
+        "中国电科", "中国电子", "航天科技", "航天科工", "航空工业", "兵器工业",
+        "中船", "中国船舶", "一汽", "东风", "国机", "中国南水北调", "南水北调",
+        "中核", "中广核", "国投", "招商局", "华润", "诚通", "国新", "城投", "施工", "建工", "工程局"
+    ]
+    if any(k in full_str for k in bank_kws) or (industry == "央国企") or any(k in company for k in soe_kws):
+        return "C", "【求职偏好过滤】已排除国企与银行类岗位", []
+
     # 1. 过滤纯计算机硬核底层代码开发
     is_pure_code = any(kw in pos_str for kw in PURE_DEV_EXCLUDES)
-    has_save_word = any(kw in pos_str for kw in ["运营", "产品", "销售", "建筑", "设计", "管培", "商业化", "策划"])
+    has_save_word = any(kw in pos_str for kw in ["运营", "产品", "销售", "管培", "商业化", "策划", "商务", "拓展"])
     if is_pure_code and not has_save_word:
         return "C", "纯底层代码开发，不符合通识与跨界求职意向", []
 
     matched_tags = []
-    is_arch = any(kw in full_str for kw in ARCH_TECH_KEYWORDS)
     is_internet_op = any(kw in full_str for kw in INTERNET_OP_KEYWORDS)
     is_ai_nontech = any(kw in full_str for kw in AI_NONTECH_KEYWORDS)
     is_tob_sales = any(kw in full_str for kw in TOB_SALES_KEYWORDS)
-    is_soe_general = any(kw in full_str for kw in SOE_GENERAL_KEYWORDS)
+    is_general_mt = any(kw in pos_str for kw in ["管培", "培训生", "储备", "gmt", "uflp", "sgp", "商业化", "运营"])
 
-    if is_arch:
-        matched_tags.append("建筑/低碳对口")
     if is_internet_op:
         matched_tags.append("互联网运营")
     if is_ai_nontech:
         matched_tags.append("AI非技术")
     if is_tob_sales:
-        matched_tags.append("ToB销售/招商")
-    if is_soe_general:
-        matched_tags.append("管培/综合")
+        matched_tags.append("ToB销售/商业拓展")
+    if is_general_mt:
+        matched_tags.append("管培/高潜")
 
-    # S 级判断
-    if industry == "央国企" and is_arch:
-        return "S", "央国企专业对口：郑大建筑专硕主场优势，具备绿色低碳与工程科技绝对壁垒", matched_tags
+    # S 级判断：高薪名企核心业务与出海龙头
+    # 1. 互联网大厂核心运营
+    if (industry in ["互联网", "智能硬件", "消费快消", "高端制造", "外企（中国）"]) and any(kw in pos_str for kw in ["电商运营", "类目运营", "商家运营", "商业化运营", "采销管培", "海外发行"]):
+        return "S", "大厂核心商业运营：深度匹配电商商家与全球化运营模型，高含金量跨界首选", matched_tags
 
-    if (industry in ["互联网", "快消/零售", "高端制造"]) and any(kw in pos_str for kw in ["电商运营", "类目运营", "商家运营", "商业化运营", "采销管培"]):
-        return "S", "大厂核心商业运营：深度匹配电商商家与产业带运营模型，高含金量跨界首选", matched_tags
+    # 2. 顶级外企高潜管培
+    if (industry in ["外企（中国）", "外企(中国)", "外企"]) and any(kw in pos_str for kw in ["管培", "培训生", "商业", "发展"]):
+        return "S", "顶级外企商业管培：跨部门轮岗与高管带教，包容多元专业背景，职业发展天花板高", matched_tags
+
+    # 3. 潮流消费与智能硬件出海龙头
+    if any(k in company for k in ["泡泡玛特", "大疆", "大疆创新", "影石", "安克创新", "宇树科技", "蜜雪冰城", "霸王茶姬", "元气森林"]) and any(kw in pos_str for kw in ["跨境", "电商", "海外", "品牌", "营销", "运营", "管培", "商务"]):
+        return "S", "潮流消费与智能硬件出海龙头：高薪国际化业务，重视商业自驱力与全球视野", matched_tags
+
+    # 4. 新能源与智能智造龙头商务
+    if any(k in company for k in ["宁德时代", "理想汽车", "蔚来", "比亚迪", "汇川技术", "阳光电源"]) and any(kw in pos_str for kw in ["商务", "大客户", "拓展", "销售", "供应链", "零售", "管培"]):
+        return "S", "新能源与智能智造龙头核心商务：全球新能源万亿风口，商业拓展与海外供应链薪酬优渥", matched_tags
 
     # A 级判断
-    if industry in ["互联网", "高端制造", "智能汽车", "消费快消", "金融银行"] and (is_internet_op or is_ai_nontech or "运营" in pos_str or "产品" in pos_str or "管培" in pos_str):
-        return "A", "名企通识核心业务池：核心运营/管培生岗位，发展天花板与起薪优渥", matched_tags
-
-    if industry == "央国企" and (is_tob_sales or is_soe_general or "招商" in pos_str or "营销" in pos_str or "销售" in pos_str or "管培" in pos_str):
-        return "A", "央国企优质平台：大客户招商/销售与综合管培生，稳定度高且晋升通道明确", matched_tags
+    if industry in ["互联网", "智能硬件", "高端制造", "智能汽车", "消费快消", "外企（中国）"] and (is_internet_op or is_ai_nontech or "运营" in pos_str or "产品" in pos_str or "管培" in pos_str or "商务" in pos_str):
+        return "A", "名企通识核心业务池：核心运营/管培生/大客户商务，起薪优渥且空间明确", matched_tags
 
     if is_ai_nontech:
         return "A", "前沿AI非技术：紧跟AGI大模型产业落地，专业包容度高，成长空间巨大", matched_tags
 
     # B 级判断
-    if is_tob_sales or is_internet_op or is_soe_general or "销售" in pos_str or "市场" in pos_str or "客户经理" in pos_str:
+    if is_tob_sales or is_internet_op or "销售" in pos_str or "市场" in pos_str or "客户经理" in pos_str:
         return "B", "稳健扩充池：不限专业大客户销售/商业化拓展，适合广撒网保底", matched_tags
-
-    if is_arch:
-        return "B", "建筑/设计相关普通企业：设计或工程管理岗位，可作为备用选项", matched_tags
 
     return "C", "匹配度较低或偏离求职目标", matched_tags
 
@@ -417,37 +437,51 @@ def classify_job_module(company, industry, positions, tags):
         "宝洁", "p&g", "玛氏", "mars", "联合利华", "unilever", "欧莱雅", "l'oreal", "loreal",
         "雀巢", "nestle", "施耐德", "schneider", "西门子", "siemens", "特斯拉", "tesla",
         "迪卡侬", "decathlon", "宜家", "ikea", "达能", "danone", "太古", "swire",
-        "阿迪达斯", "adidas", "耐克", "nike", "飞利浦", "philips", "德意志银行", "德银",
-        "汇丰", "渣打", "花旗", "百威", "budweiser", "百胜", "yum", "苹果", "apple",
-        "外企", "外资", "跨国"
+        "阿迪达斯", "adidas", "耐克", "nike", "飞利浦", "philips", "百威", "budweiser",
+        "百胜", "yum", "苹果", "apple", "戴尔", "dell", "爱立信", "ericsson", "外企", "外资", "跨国"
     ]
     if ind in ["外企(中国)", "外企（中国）", "外企", "外资"] or any(k.lower() in text for k in foreign_kws):
         return "外企（中国）"
 
-    # 2. 央国企
-    soe_kws = [
-        "中建", "中国建筑", "中海", "华润", "保利", "招商蛇口", "金茂", "中国铁建", "中铁",
-        "中国交建", "国家电网", "南方电网", "中国电信", "中国移动", "中国联通", "中国电科",
-        "中粮", "中化", "中国建研院", "建研院", "京东方", "银行", "中信", "华泰", "央国企"
-    ]
-    if ind == "央国企" or any(k.lower() in text for k in soe_kws):
-        return "央国企龙头"
-
-    # 3. 互联网大厂
+    # 2. 互联网大厂
     internet_kws = [
         "阿里", "淘天", "腾讯", "字节", "bytedance", "美团", "京东", "拼多多", "快手",
-        "小红书", "百度", "滴滴", "携程", "网易", "哔哩哔哩", "b站", "deepseek",
-        "智谱", "minimax", "月之暗面", "高途", "新东方", "得物", "互联网"
+        "小红书", "百度", "滴滴", "携程", "网易", "哔哩哔哩", "b站", "得物", "米哈游", "mihoyo", "互联网"
     ]
     if ind == "互联网" or any(k.lower() in text for k in internet_kws):
         return "互联网大厂"
 
-    # 4. 管培生计划专属
-    if ind in ["管培生计划", "管培生", "管理培训生"]:
+    # 3. 新能源与智造
+    new_energy_kws = [
+        "宁德时代", "catl", "比亚迪", "byd", "理想汽车", "理想", "蔚来", "nio", "小鹏", "xiaopeng",
+        "吉利", "geely", "极氪", "zeekr", "阳光电源", "汇川技术", "欣旺达", "三一", "宇通", "新能源", "智能制造", "汽车"
+    ]
+    if ind in ["新能源", "高端制造", "智能汽车", "新能源与智造"] or any(k.lower() in text for k in new_energy_kws):
+        return "新能源与智造"
+
+    # 4. 消费与零售
+    consumer_kws = [
+        "泡泡玛特", "pop mart", "popmart", "蜜雪冰城", "mixue", "霸王茶姬", "chagee", "元气森林",
+        "农夫山泉", "名创优品", "miniso", "卫龙", "青岛啤酒", "安踏", "李宁", "快消", "零售", "食品", "饮料", "消费"
+    ]
+    if ind in ["消费快消", "快消/零售", "消费与潮流零售", "消费与零售"] or any(k.lower() in text for k in consumer_kws):
+        return "消费与零售"
+
+    # 5. AI与科技企服
+    ai_tech_kws = [
+        "大疆", "dji", "影石", "insta360", "安克创新", "anker", "宇树科技", "unitree",
+        "普度", "科大讯飞", "iflytek", "超聚变", "长鑫存储", "京东方", "boe", "联想", "lenovo",
+        "深信服", "sangfor", "帆软", "小米", "xiaomi", "vivo", "oppo", "荣耀", "honor",
+        "deepseek", "智谱", "minimax", "月之暗面", "ai", "大模型", "智能硬件", "科技企服", "ai与科技企服"
+    ]
+    if ind in ["智能硬件", "智能硬件与科技企服", "AI与科技企服"] or any(k.lower() in text for k in ai_tech_kws):
+        return "AI与科技企服"
+
+    # 6. 管培生计划专属
+    if ind in ["管培生计划", "管培生", "管理培训生"] or any("管培" in p for p in positions):
         return "管培生计划"
 
-    # 5. 全品类头部大厂 (智能汽车/高端制造/消费快消/科技企服)
-    return "全品类头部大厂"
+    return "互联网大厂"
 
 
 def generate_markdown_report(ranked_jobs, tracking_db, removed_ids, featured_jobs, daily_inbox_jobs=None):
@@ -492,12 +526,13 @@ def generate_markdown_report(ranked_jobs, tracking_db, removed_ids, featured_job
         elif not is_company_applied:
             unapplied_jobs.append(j)
 
-    # 未投递各模块细分
-    mt_unapplied = [j for j in unapplied_jobs if is_management_trainee_job(j.get("positions", []), j.get("tags", []), j.get("company", ""), j.get("industry", ""))]
+    # 未投递各模块细分 (已彻底剔除国企与银行类，细分为六大多元赛道)
+    mt_unapplied = [j for j in unapplied_jobs if classify_job_module(j.get("company",""), j.get("industry",""), j.get("positions",[]), j.get("tags",[])) == "管培生计划" or is_management_trainee_job(j.get("positions", []), j.get("tags", []), j.get("company", ""), j.get("industry", ""))]
     foreign_unapplied = [j for j in unapplied_jobs if classify_job_module(j.get("company",""), j.get("industry",""), j.get("positions",[]), j.get("tags",[])) == "外企（中国）"]
     internet_unapplied = [j for j in unapplied_jobs if classify_job_module(j.get("company",""), j.get("industry",""), j.get("positions",[]), j.get("tags",[])) == "互联网大厂"]
-    consumer_auto_unapplied = [j for j in unapplied_jobs if classify_job_module(j.get("company",""), j.get("industry",""), j.get("positions",[]), j.get("tags",[])) == "全品类头部大厂"]
-    soe_unapplied = [j for j in unapplied_jobs if classify_job_module(j.get("company",""), j.get("industry",""), j.get("positions",[]), j.get("tags",[])) == "央国企龙头"]
+    new_energy_unapplied = [j for j in unapplied_jobs if classify_job_module(j.get("company",""), j.get("industry",""), j.get("positions",[]), j.get("tags",[])) == "新能源与智造"]
+    ai_tech_unapplied = [j for j in unapplied_jobs if classify_job_module(j.get("company",""), j.get("industry",""), j.get("positions",[]), j.get("tags",[])) == "AI与科技企服"]
+    consumer_unapplied = [j for j in unapplied_jobs if classify_job_module(j.get("company",""), j.get("industry",""), j.get("positions",[]), j.get("tags",[])) == "消费与零售"]
 
     lines = []
     lines.append(f"# 🎯 秋招全景情报雷达与投递进度总台账 ({today_str})")
@@ -505,11 +540,12 @@ def generate_markdown_report(ranked_jobs, tracking_db, removed_ids, featured_job
     lines.append(f"- **🎯 实战投递追踪**：已记录 **{len(delivered_jobs)} 家**（在途高频推进 {len([j for j in delivered_jobs if tracking_db.get(j['id'],{}).get('status') not in ['已淘汰', '待投递']])} 家，已归档 {len([j for j in delivered_jobs if tracking_db.get(j['id'],{}).get('status') == '已淘汰'])} 家）")
     lines.append(f"- **⚡ 每日精选待审流**：**{len(daily_inbox_jobs)} 岗** ({inbox_date_window} 最新发布待手动决策分流)")
     lines.append(f"- **🌟 未投递正式可投库**：共 **{len(unapplied_jobs)} 岗**（已彻底剥离已投岗位，支持按五大模块专属浏览）")
-    lines.append(f"  - 🎓 2027管培生计划 (不限专业)：{len(mt_unapplied)} 岗")
+    lines.append(f"  - 🌐 互联网大厂与数字商业：{len(internet_unapplied)} 岗")
+    lines.append(f"  - ⚡ 新能源与智能制造：{len(new_energy_unapplied)} 岗")
+    lines.append(f"  - 🤖 AI与科技企服硬件：{len(ai_tech_unapplied)} 岗")
+    lines.append(f"  - 🛍️ 消费快消与潮流零售：{len(consumer_unapplied)} 岗")
     lines.append(f"  - 🌍 外企（中国）名企：{len(foreign_unapplied)} 岗")
-    lines.append(f"  - 🌐 互联网大厂：{len(internet_unapplied)} 岗")
-    lines.append(f"  - 🚗 全品类头部大厂 / 消费制造：{len(consumer_auto_unapplied)} 岗")
-    lines.append(f"  - 🏢 央国企航母：{len(soe_unapplied)} 岗")
+    lines.append(f"  - 🎓 跨界综合与管培生计划：{len(mt_unapplied)} 岗")
     lines.append(f"- **🖥️ 交互式作战看板**：[秋招雷达与进度看板.html](./秋招雷达与进度看板.html) （支持待审流转仓与五大模块独立筛选查看）\n")
 
     # 第一部分：实战已投递总台账
@@ -582,11 +618,12 @@ def generate_markdown_report(ranked_jobs, tracking_db, removed_ids, featured_job
             tips = j.get("tips_and_pitfalls", j.get("reason", ""))
             lines.append(f"| {idx} | **{j.get('company')}** | `{j.get('tier')}级` | {pos} | `{sal}` | {loc} | {deadline} | {tips} | {url_md} |")
 
-    render_unapplied_table("🎓 第四部分：未投递精选 · 2027管培生计划 (不限专业) 专区", mt_unapplied)
-    render_unapplied_table("🌍 第五部分：未投递精选 · 外企（中国）高薪名企专区", foreign_unapplied)
-    render_unapplied_table("🌐 第六部分：未投递精选 · 互联网大厂专区", internet_unapplied)
-    render_unapplied_table("🚗 第七部分：未投递精选 · 全品类头部大厂与消费制造专区", consumer_auto_unapplied)
-    render_unapplied_table("🏢 第八部分：未投递精选 · 央国企航母专区", soe_unapplied)
+    render_unapplied_table("🌐 第四部分：未投递精选 · 互联网大厂与数字商业专区", internet_unapplied)
+    render_unapplied_table("⚡ 第五部分：未投递精选 · 新能源与智能制造专区", new_energy_unapplied)
+    render_unapplied_table("🤖 第六部分：未投递精选 · AI与科技企服硬件专区", ai_tech_unapplied)
+    render_unapplied_table("🛍️ 第七部分：未投递精选 · 消费快消与潮流零售专区", consumer_unapplied)
+    render_unapplied_table("🌍 第八部分：未投递精选 · 外企（中国）高薪名企专区", foreign_unapplied)
+    render_unapplied_table("🎓 第九部分：未投递精选 · 跨界综合与管培生计划专区", mt_unapplied)
 
     with open(OUTPUT_MD_PATH, "w", encoding="utf-8") as f:
         f.write("\n".join(lines))
@@ -633,22 +670,22 @@ def compute_nowclaw_daily_priority(ranked_jobs, tracking_db, removed_ids):
     # 优先目标名企库 (精准匹配郑大建筑专硕四大核心发展跑道)
     priority_blueprints = [
         {
-            "match_kw": "华润置地",
-            "track": "🏛️ 央国企高精尖 · 设计管理与数字化",
+            "match_kw": "大疆",
+            "track": "🤖 智能硬件与科技出海 · 全球商业化与电商",
             "rank": 1,
             "match_score": 99,
-            "reason": "央企综合地产龙头核心管培，业务涵盖城市综合体、设计管理与工程数字化，与郑大专硕人设完美重合，晋升清晰。",
-            "action": "重点突出专硕科研论文成果、绿色建筑与BIM应用案例；群面中主导逻辑框架梳理（STAR法则）。",
-            "urgency": "🔥 2027届重点攻坚批次"
+            "reason": "全球消费级无人机与手持影像绝对霸主，70%以上业务在海外，非常看重工科/跨学科逻辑、商业判断与全球化视野。",
+            "action": "重点突出理工科综合分析底蕴、量化数据拆解能力与海外业务/电商运营案例；群面中主导逻辑框架梳理（STAR法则）。",
+            "urgency": "🔥 2027届秋招黄金批次"
         },
         {
-            "match_kw": "建筑科学研究院",
-            "track": "🌱 双碳与建筑科技 · 国家级智库编制",
+            "match_kw": "泡泡玛特",
+            "track": "🛍️ 消费与潮流零售 · 跨境电商与全球IP商业化",
             "rank": 2,
             "match_score": 98,
-            "reason": "住房与城乡建设部直属科技智库，建筑低碳咨询与智能建造最对口单位，学术与行业公信力顶尖，解决核心落户与编制发展。",
-            "action": "准备硕士期间建筑性能模拟（EnergyPlus/Ecotect）、绿色评价标准及科研学术成果集。",
-            "urgency": "🔥 智库秋招抢位期"
+            "reason": "中国潮玩出海首屈一指的现象级品牌，全球化业务爆发式增长，极其欢迎具备敏锐商业嗅觉与创新思维的年轻血液。",
+            "action": "准备跨境电商平台运营思路、消费者洞察案例及品牌营销创意拆解。",
+            "urgency": "🔥 潮玩出海抢位期"
         },
         {
             "match_kw": "阿里巴巴",
@@ -669,13 +706,13 @@ def compute_nowclaw_daily_priority(ranked_jobs, tracking_db, removed_ids):
             "urgency": "⚡ 外企MT秋招黄金期"
         },
         {
-            "match_kw": "宁德时代",
-            "track": "⚡ 新能源制造 · 全球ToB商务与供应链",
+            "match_kw": "理想汽车",
+            "track": "⚡ 新能源与智能出行 · 大客户商务与新零售运营",
             "rank": 5,
             "match_score": 95,
-            "reason": "全球锂电与储能绝对龙头，海外与国内核心产业出海扩张，ToB大客户商务经理需要工科底蕴与综合商务协调。",
+            "reason": "新势力造车盈利与交付标杆，扁平管理，注重以用户价值为核心的商业逻辑与强执行自驱力。",
             "action": "突出理工科综合分析底蕴、大型商务沟通谈判意识与抗压开拓自驱力。",
-            "urgency": "⚡ 绿色能源出海急聘"
+            "urgency": "⚡ 智能出行抢位期"
         }
     ]
 
@@ -721,7 +758,7 @@ def compute_nowclaw_daily_priority(ranked_jobs, tracking_db, removed_ids):
             if j.get("tier") == "S": score += 40
             elif j.get("tier") == "A": score += 25
             if j.get("is_mt") or "管培" in " ".join(j.get("positions", [])): score += 20
-            if j.get("module") in ["央国企", "双碳与建筑科技"]: score += 25
+            if j.get("module") in ["互联网大厂", "新能源与智造", "AI与科技企服", "消费与零售"]: score += 25
             backup_candidates.append((score, j))
         backup_candidates.sort(key=lambda x: x[0], reverse=True)
         for _, bj in backup_candidates:
@@ -925,12 +962,14 @@ def generate_html_dashboard(ranked_jobs, tracking_db, removed_ids, featured_jobs
       --mod-mt-bg: #f5f3ff;
       --mod-foreign: #0284c7;
       --mod-foreign-bg: #f0f9ff;
-      --mod-internet: #7e22ce;
-      --mod-internet-bg: #faf5ff;
-      --mod-auto: #0f766e;
-      --mod-auto-bg: #f0fdfa;
-      --mod-soe: #1d4ed8;
-      --mod-soe-bg: #eff6ff;
+      --mod-internet: #2563eb;
+      --mod-internet-bg: #eff6ff;
+      --mod-new-energy: #059669;
+      --mod-new-energy-bg: #ecfdf5;
+      --mod-ai-tech: #9333ea;
+      --mod-ai-tech-bg: #faf5ff;
+      --mod-consumer: #ea580c;
+      --mod-consumer-bg: #fff7ed;
     }}
     * {{ box-sizing: border-box; margin: 0; padding: 0; }}
     body {{
@@ -1110,9 +1149,10 @@ def generate_html_dashboard(ranked_jobs, tracking_db, removed_ids, featured_jobs
     .stat-card .value {{ font-size: 28px; font-weight: 800; margin-top: 4px; }}
     .card-mt {{ border-left: 4px solid var(--mod-mt); }}
     .card-foreign {{ border-left: 4px solid var(--mod-foreign); }}
-    .card-soe {{ border-left: 4px solid var(--mod-soe); }}
     .card-internet {{ border-left: 4px solid var(--mod-internet); }}
-    .card-auto {{ border-left: 4px solid var(--mod-auto); }}
+    .card-new-energy {{ border-left: 4px solid var(--mod-new-energy); }}
+    .card-ai-tech {{ border-left: 4px solid var(--mod-ai-tech); }}
+    .card-consumer {{ border-left: 4px solid var(--mod-consumer); }}
     .card-feat {{ border-left: 4px solid var(--accent); }}
     .card-urgent {{ border-left: 4px solid var(--s-color); }}
 
@@ -1158,8 +1198,9 @@ def generate_html_dashboard(ranked_jobs, tracking_db, removed_ids, featured_jobs
     .filter-btn-mod.active[data-disc-mod="mt"] {{ background: var(--mod-mt); border-color: var(--mod-mt); color: white; }}
     .filter-btn-mod.active[data-disc-mod="foreign"] {{ background: var(--mod-foreign); border-color: var(--mod-foreign); color: white; }}
     .filter-btn-mod.active[data-disc-mod="internet"] {{ background: var(--mod-internet); border-color: var(--mod-internet); color: white; }}
-    .filter-btn-mod.active[data-disc-mod="consumer_auto"] {{ background: var(--mod-auto); border-color: var(--mod-auto); color: white; }}
-    .filter-btn-mod.active[data-disc-mod="soe"] {{ background: var(--mod-soe); border-color: var(--mod-soe); color: white; }}
+    .filter-btn-mod.active[data-disc-mod="new_energy"] {{ background: var(--mod-new-energy); border-color: var(--mod-new-energy); color: white; }}
+    .filter-btn-mod.active[data-disc-mod="ai_tech"] {{ background: var(--mod-ai-tech); border-color: var(--mod-ai-tech); color: white; }}
+    .filter-btn-mod.active[data-disc-mod="consumer"] {{ background: var(--mod-consumer); border-color: var(--mod-consumer); color: white; }}
     .filter-btn.btn-glow {{ background: #fef3c7; color: #b45309; border-color: #fde68a; font-weight: 700; }}
     .filter-btn.btn-glow.active {{ background: #d97706; color: white; border-color: #d97706; }}
 
@@ -1247,9 +1288,10 @@ def generate_html_dashboard(ranked_jobs, tracking_db, removed_ids, featured_jobs
     }}
     .mod-外企（中国） {{ background: var(--mod-foreign-bg); color: var(--mod-foreign); border: 1px solid #bae6fd; }}
     .mod-管培生计划 {{ background: var(--mod-mt-bg); color: var(--mod-mt); border: 1px solid #ddd6fe; }}
-    .mod-互联网大厂 {{ background: var(--mod-internet-bg); color: var(--mod-internet); border: 1px solid #e9d5ff; }}
-    .mod-全品类头部大厂 {{ background: var(--mod-auto-bg); color: var(--mod-auto); border: 1px solid #99f6e4; }}
-    .mod-央国企龙头 {{ background: var(--mod-soe-bg); color: var(--mod-soe); border: 1px solid #bfdbfe; }}
+    .mod-互联网大厂 {{ background: var(--mod-internet-bg); color: var(--mod-internet); border: 1px solid #bfdbfe; }}
+    .mod-新能源与智造 {{ background: var(--mod-new-energy-bg); color: var(--mod-new-energy); border: 1px solid #a7f3d0; }}
+    .mod-AI与科技企服 {{ background: var(--mod-ai-tech-bg); color: var(--mod-ai-tech); border: 1px solid #e9d5ff; }}
+    .mod-消费与零售 {{ background: var(--mod-consumer-bg); color: var(--mod-consumer); border: 1px solid #fed7aa; }}
     .mt-tag {{ background: #ede9fe; color: #6d28d9; font-size: 11px; padding: 2px 7px; border-radius: 4px; font-weight: 800; border: 1px solid #c4b5fd; }}
     .foreign-tag {{ background: #e0f2fe; color: #0369a1; font-size: 11px; padding: 2px 7px; border-radius: 4px; font-weight: 800; border: 1px solid #7dd3fc; }}
 
@@ -1756,25 +1798,29 @@ def generate_html_dashboard(ranked_jobs, tracking_db, removed_ids, featured_jobs
           <span class="label">🌟 未投递总可投池</span>
           <span class="value" id="statUnappliedTotal" style="color: var(--primary)">0</span>
         </div>
-        <div class="stat-card card-mt">
-          <span class="label">🎓 2027管培生(不限专业)</span>
-          <span class="value" id="statUnappliedMt" style="color: var(--mod-mt)">0</span>
-        </div>
-        <div class="stat-card card-foreign">
-          <span class="label">🌍 外企（中国）名企</span>
-          <span class="value" id="statUnappliedForeign" style="color: var(--mod-foreign)">0</span>
-        </div>
         <div class="stat-card card-internet">
           <span class="label">🌐 互联网大厂</span>
           <span class="value" id="statUnappliedInternet" style="color: var(--mod-internet)">0</span>
         </div>
-        <div class="stat-card card-auto">
-          <span class="label">🚗 全品类大厂 / 消费制造</span>
-          <span class="value" id="statUnappliedAuto" style="color: var(--mod-auto)">0</span>
+        <div class="stat-card card-new-energy">
+          <span class="label">⚡ 新能源与智造</span>
+          <span class="value" id="statUnappliedNewEnergy" style="color: var(--mod-new-energy)">0</span>
         </div>
-        <div class="stat-card card-soe">
-          <span class="label">🏢 央国企航母</span>
-          <span class="value" id="statUnappliedSoe" style="color: var(--mod-soe)">0</span>
+        <div class="stat-card card-ai-tech">
+          <span class="label">🤖 AI与科技企服</span>
+          <span class="value" id="statUnappliedAiTech" style="color: var(--mod-ai-tech)">0</span>
+        </div>
+        <div class="stat-card card-consumer">
+          <span class="label">🛍️ 消费与零售</span>
+          <span class="value" id="statUnappliedConsumer" style="color: var(--mod-consumer)">0</span>
+        </div>
+        <div class="stat-card card-foreign">
+          <span class="label">🌍 外企（中国）</span>
+          <span class="value" id="statUnappliedForeign" style="color: var(--mod-foreign)">0</span>
+        </div>
+        <div class="stat-card card-mt">
+          <span class="label">🎓 2027管培生计划</span>
+          <span class="value" id="statUnappliedMt" style="color: var(--mod-mt)">0</span>
         </div>
         <div class="stat-card card-feat">
           <span class="label">🌟 早8点算法精选</span>
@@ -1809,11 +1855,12 @@ def generate_html_dashboard(ranked_jobs, tracking_db, removed_ids, featured_jobs
         </div>
         <div class="filter-group">
           <button class="filter-btn active" data-disc-mod="all">全部未投递</button>
-          <button class="filter-btn filter-btn-mod" data-disc-mod="mt" style="color: #6d28d9; border-color: #c4b5fd;">🎓 2027管培生(不限专业)</button>
-          <button class="filter-btn filter-btn-mod" data-disc-mod="foreign" style="color: #0284c7; border-color: #bae6fd;">🌍 外企（中国）</button>
           <button class="filter-btn filter-btn-mod" data-disc-mod="internet">🌐 互联网大厂</button>
-          <button class="filter-btn filter-btn-mod" data-disc-mod="consumer_auto">🚗 全品类头部大厂</button>
-          <button class="filter-btn filter-btn-mod" data-disc-mod="soe">🏢 央国企龙头</button>
+          <button class="filter-btn filter-btn-mod" data-disc-mod="new_energy">⚡ 新能源与智造</button>
+          <button class="filter-btn filter-btn-mod" data-disc-mod="ai_tech">🤖 AI与科技企服</button>
+          <button class="filter-btn filter-btn-mod" data-disc-mod="consumer">🛍️ 消费与零售</button>
+          <button class="filter-btn filter-btn-mod" data-disc-mod="foreign">🌍 外企（中国）</button>
+          <button class="filter-btn filter-btn-mod" data-disc-mod="mt">🎓 2027管培生(不限专业)</button>
           <button class="filter-btn btn-glow" data-disc-mod="featured">🌟 早8点精选</button>
           <button class="filter-btn" data-disc-mod="S">🌟 S 级天选</button>
           <button class="filter-btn" data-disc-mod="A">🔥 A 级突破</button>
@@ -1935,12 +1982,12 @@ def generate_html_dashboard(ranked_jobs, tracking_db, removed_ids, featured_jobs
           <div class="form-group">
             <label>所属板块 / 行业 *</label>
             <select id="addIndustry" class="form-control">
-              <option value="管培生计划">🎓 2027管培生计划 (不限专业)</option>
-              <option value="外企(中国)">🌍 外企（中国）</option>
               <option value="互联网">🌐 互联网大厂</option>
-              <option value="高端制造">🚗 高端制造/智能车企</option>
-              <option value="消费快消">🛒 消费快消/新零售</option>
-              <option value="央国企">🏢 央国企航母</option>
+              <option value="新能源与智造">⚡ 新能源与智能制造</option>
+              <option value="AI与科技企服">🤖 AI新兴科技与智能硬件</option>
+              <option value="消费与零售">🛍️ 消费快消与潮流零售</option>
+              <option value="外企(中国)">🌍 外企（中国）</option>
+              <option value="管培生计划">🎓 2027管培生计划 (不限专业)</option>
               <option value="其他">其他行业</option>
             </select>
           </div>
@@ -2048,7 +2095,7 @@ def generate_html_dashboard(ranked_jobs, tracking_db, removed_ids, featured_jobs
         <h4 style="font-size: 15px; color: #0f172a; margin-bottom: 8px;">📡 正在持续监听的多源网络检索通道：</h4>
         <ul style="padding-left: 20px; font-size: 13.5px; color: #475569; margin-bottom: 16px;">
           <li><strong>通道 A（母校就业中心一手流）：</strong> 连线郑州大学就业创业网 (<code>job.zzu.edu.cn</code>)，每日追踪入校宣讲及双选会最新名企；</li>
-          <li><strong>通道 B（央国企权威校招流）：</strong> 实时对接国聘网、国资小新及各大能源/建筑/金融央企官方招聘专栏；</li>
+          <li><strong>通道 B（高新科技与新消费校招流）：</strong> 实时对接互联网大厂、新能源新势力、消费零售与出海科技官方招聘专栏；</li>
           <li><strong>通道 C（名企 ATS 直聘网申专区）：</strong> 动态探测覆盖 Moka、北森、大易、飞书等 150+ 顶尖名企直聘系统，100% 确保直达真实网申页面；</li>
           <li><strong>通道 D（全网关键词检索雷达）：</strong> 针对 2027 管培生、外企中国、低碳建筑、电商运营等高匹配方向实时深度扫网。</li>
         </ul>
@@ -2355,8 +2402,9 @@ def generate_html_dashboard(ranked_jobs, tracking_db, removed_ids, featured_jobs
       if (targetModule === '管培生计划') modKey = 'mt';
       else if (targetModule === '外企（中国）') modKey = 'foreign';
       else if (targetModule === '互联网大厂') modKey = 'internet';
-      else if (targetModule === '全品类头部大厂') modKey = 'consumer_auto';
-      else if (targetModule === '央国企龙头') modKey = 'soe';
+      else if (targetModule === '新能源与智造') modKey = 'new_energy';
+      else if (targetModule === 'AI与科技企服') modKey = 'ai_tech';
+      else if (targetModule === '消费与零售') modKey = 'consumer';
 
       const btn = document.querySelector(`[data-disc-mod="${{modKey}}"]`);
       if (btn) {{
@@ -2415,7 +2463,7 @@ def generate_html_dashboard(ranked_jobs, tracking_db, removed_ids, featured_jobs
       const map = getStoredStatuses();
       const decisions = getInboxDecisions();
 
-      let unappliedTotal = 0;
+      let unappliedTotal = 0, unappliedNewEnergy = 0, unappliedAiTech = 0, unappliedConsumer = 0;
       let unappliedMt = 0;
       let unappliedForeign = 0;
       let unappliedInternet = 0;
@@ -2479,8 +2527,9 @@ def generate_html_dashboard(ranked_jobs, tracking_db, removed_ids, featured_jobs
           if (j.is_mt || j.module === '管培生计划') unappliedMt++;
           if (j.module === '外企（中国）' || j.is_foreign) unappliedForeign++;
           if (j.module === '互联网大厂') unappliedInternet++;
-          else if (j.module === '全品类头部大厂') unappliedAuto++;
-          else if (j.module === '央国企龙头') unappliedSoe++;
+          else if (j.module === '新能源与智造') unappliedNewEnergy++;
+          else if (j.module === 'AI与科技企服') unappliedAiTech++;
+          else if (j.module === '消费与零售') unappliedConsumer++;
 
           if (j.is_featured) unappliedFeat++;
         }}
@@ -2494,11 +2543,12 @@ def generate_html_dashboard(ranked_jobs, tracking_db, removed_ids, featured_jobs
 
       // 更新未投递统计
       document.getElementById('statUnappliedTotal').innerText = unappliedTotal;
-      document.getElementById('statUnappliedMt').innerText = unappliedMt;
-      document.getElementById('statUnappliedForeign').innerText = unappliedForeign;
       document.getElementById('statUnappliedInternet').innerText = unappliedInternet;
-      document.getElementById('statUnappliedAuto').innerText = unappliedAuto;
-      document.getElementById('statUnappliedSoe').innerText = unappliedSoe;
+      document.getElementById('statUnappliedNewEnergy').innerText = unappliedNewEnergy;
+      document.getElementById('statUnappliedAiTech').innerText = unappliedAiTech;
+      document.getElementById('statUnappliedConsumer').innerText = unappliedConsumer;
+      document.getElementById('statUnappliedForeign').innerText = unappliedForeign;
+      document.getElementById('statUnappliedMt').innerText = unappliedMt;
       document.getElementById('statUnappliedFeat').innerText = unappliedFeat;
 
       // 更新实战统计
@@ -2597,11 +2647,12 @@ def generate_html_dashboard(ranked_jobs, tracking_db, removed_ids, featured_jobs
               </div>
               <div style="margin-top:10px; padding-top:8px; border-top:1px dashed #a7f3d0; font-size:12px; color:#047857; display:flex; align-items:center; flex-wrap:wrap; gap:4px;">
                 <span style="font-weight:700;">调整录入板块：</span>
-                <button class="btn-disp-sm" onclick="dispatchInboxJob('${{j.id}}', '管培生计划')">🎓 管培</button>
-                <button class="btn-disp-sm" onclick="dispatchInboxJob('${{j.id}}', '外企（中国）')">🌍 外企</button>
                 <button class="btn-disp-sm" onclick="dispatchInboxJob('${{j.id}}', '互联网大厂')">🌐 互联网</button>
-                <button class="btn-disp-sm" onclick="dispatchInboxJob('${{j.id}}', '全品类头部大厂')">🚗 全品类</button>
-                <button class="btn-disp-sm" onclick="dispatchInboxJob('${{j.id}}', '央国企龙头')">🏢 央国企</button>
+                <button class="btn-disp-sm" onclick="dispatchInboxJob('${{j.id}}', '新能源与智造')">⚡ 新能源</button>
+                <button class="btn-disp-sm" onclick="dispatchInboxJob('${{j.id}}', 'AI与科技企服')">🤖 AI科技</button>
+                <button class="btn-disp-sm" onclick="dispatchInboxJob('${{j.id}}', '消费与零售')">🛍️ 消费零售</button>
+                <button class="btn-disp-sm" onclick="dispatchInboxJob('${{j.id}}', '外企（中国）')">🌍 外企</button>
+                <button class="btn-disp-sm" onclick="dispatchInboxJob('${{j.id}}', '管培生计划')">🎓 管培</button>
               </div>
             </div>
           `;
@@ -2623,11 +2674,12 @@ def generate_html_dashboard(ranked_jobs, tracking_db, removed_ids, featured_jobs
                 <span>🎯 手动分配入库主看板（点击即录入并移出待决策）：</span>
               </div>
               <div class="dispatch-btn-group">
-                <button class="btn-disp" style="background:#f5f3ff; color:#7c3aed; border-color:#ddd6fe;" onclick="dispatchInboxJob('${{j.id}}', '管培生计划')">🎓 入库【管培生】</button>
+                <button class="btn-disp" style="background:#eff6ff; color:#2563eb; border-color:#bfdbfe;" onclick="dispatchInboxJob('${{j.id}}', '互联网大厂')">🌐 入库【互联网】</button>
+                <button class="btn-disp" style="background:#ecfdf5; color:#059669; border-color:#a7f3d0;" onclick="dispatchInboxJob('${{j.id}}', '新能源与智造')">⚡ 入库【新能源】</button>
+                <button class="btn-disp" style="background:#faf5ff; color:#9333ea; border-color:#e9d5ff;" onclick="dispatchInboxJob('${{j.id}}', 'AI与科技企服')">🤖 入库【AI科技】</button>
+                <button class="btn-disp" style="background:#fff7ed; color:#ea580c; border-color:#fed7aa;" onclick="dispatchInboxJob('${{j.id}}', '消费与零售')">🛍️ 入库【消费零售】</button>
                 <button class="btn-disp" style="background:#f0f9ff; color:#0284c7; border-color:#bae6fd;" onclick="dispatchInboxJob('${{j.id}}', '外企（中国）')">🌍 入库【外企】</button>
-                <button class="btn-disp btn-disp-internet" onclick="dispatchInboxJob('${{j.id}}', '互联网大厂')">🌐 入库【互联网】</button>
-                <button class="btn-disp btn-disp-auto" onclick="dispatchInboxJob('${{j.id}}', '全品类头部大厂')">🚗 入库【全品类】</button>
-                <button class="btn-disp btn-disp-soe" onclick="dispatchInboxJob('${{j.id}}', '央国企龙头')">🏢 入库【央国企】</button>
+                <button class="btn-disp" style="background:#f5f3ff; color:#7c3aed; border-color:#ddd6fe;" onclick="dispatchInboxJob('${{j.id}}', '管培生计划')">🎓 入库【管培生】</button>
                 <button class="btn-disp btn-disp-ignore" onclick="ignoreInboxJob('${{j.id}}')">❌ 忽略</button>
               </div>
             </div>
@@ -2786,8 +2838,9 @@ def generate_html_dashboard(ranked_jobs, tracking_db, removed_ids, featured_jobs
         if (currentDiscoveryModule === 'mt' && !j.is_mt && j.module !== '管培生计划') return false;
         if (currentDiscoveryModule === 'foreign' && j.module !== '外企（中国）' && !j.is_foreign) return false;
         if (currentDiscoveryModule === 'internet' && j.module !== '互联网大厂') return false;
-        if (currentDiscoveryModule === 'consumer_auto' && j.module !== '全品类头部大厂') return false;
-        if (currentDiscoveryModule === 'soe' && j.module !== '央国企龙头') return false;
+        if (currentDiscoveryModule === 'new_energy' && j.module !== '新能源与智造') return false;
+        if (currentDiscoveryModule === 'ai_tech' && j.module !== 'AI与科技企服') return false;
+        if (currentDiscoveryModule === 'consumer' && j.module !== '消费与零售') return false;
         if (currentDiscoveryModule === 'featured' && !j.is_featured) return false;
         if (currentDiscoveryModule === 'S' && j.tier !== 'S') return false;
         if (currentDiscoveryModule === 'A' && j.tier !== 'A') return false;
@@ -3142,11 +3195,13 @@ def generate_html_dashboard(ranked_jobs, tracking_db, removed_ids, featured_jobs
       const url = document.getElementById('addApplyUrl').value.trim();
       const desc = document.getElementById('addJdDesc').value.trim();
 
-      let mod = '全品类头部大厂';
-      if (ind === '央国企') mod = '央国企龙头';
-      else if (ind === '互联网') mod = '互联网大厂';
+      let mod = '互联网大厂';
+      if (ind === '新能源与智造' || ind === '高端制造' || ind === '智能汽车') mod = '新能源与智造';
+      else if (ind === 'AI与科技企服' || ind === '智能硬件') mod = 'AI与科技企服';
+      else if (ind === '消费与零售' || ind === '消费快消') mod = '消费与零售';
       else if (ind === '外企(中国)' || ind === '外企（中国）') mod = '外企（中国）';
       else if (ind === '管培生计划') mod = '管培生计划';
+      else if (ind === '互联网') mod = '互联网大厂';
       const isMt = (ind === '管培生计划') || pos.some(p => /管培|培训生|储备|gmt|uflp/i.test(p));
       const isForeign = (mod === '外企（中国）');
 
@@ -3414,10 +3469,10 @@ def main():
             continue
         # 优先将带有成熟薪资福利、企业规模背书、且属于S/A级的通识业务岗作为精选
         is_priority_company = any(k in rj["company"] for k in [
-            "中建", "华润", "建研院", "铁建", "保利", "中海", "交建", "电网", "电信", "移动",
-            "阿里", "腾讯", "美团", "字节", "京东", "快手", "拼多多", "小红书", "DeepSeek",
-            "vivo", "OPPO", "比亚迪", "宁德时代", "理想", "京东方", "深信服", "帆软", "宝洁", "招商银行", "中国银行",
-            "海尔", "美的", "顺丰", "得物", "金风科技", "联想", "中国外运", "招商蛇口", "超聚变", "卫龙", "小米", "青岛啤酒", "中国平安"
+            "大疆", "泡泡玛特", "蜜雪冰城", "霸王茶姬", "元气森林", "名创优品", "影石", "安克创新", "宇树科技",
+            "阿里", "腾讯", "美团", "字节", "京东", "快手", "拼多多", "小红书", "DeepSeek", "米哈游",
+            "vivo", "OPPO", "比亚迪", "宁德时代", "理想", "京东方", "深信服", "帆软", "宝洁", "欧莱雅", "联合利华", "特斯拉",
+            "海尔", "美的", "顺丰", "得物", "金风科技", "联想", "超聚变", "卫龙", "小米", "青岛啤酒", "携程", "蔚来", "小鹏"
         ])
         if is_priority_company or rj.get("tier") == "S" or (rj.get("tier") == "A" and rj.get("is_custom")):
             featured_candidates.append(rj)
