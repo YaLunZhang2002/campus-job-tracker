@@ -179,28 +179,52 @@ def fetch_secondary_jobs():
 
 
 def enrich_with_portal(company, current_url, portals_map):
-    """为企业补齐并验证官方直聘入口，消灭空链、微信搜狗占位符与死链"""
-    try:
-        from daily_web_recruitment_collector import sanitize_url, get_fallback_portal
-        # 1. 优先从权威官方直聘知识库中精准匹配
-        for k, v in portals_map.items():
-            if k in company or company in k:
-                safe_portal = sanitize_url(v, company)
-                if safe_portal and "ncss.cn" not in safe_portal:
-                    return safe_portal
+    """
+    为企业精准匹配真实官方直聘网申系统。
+    核心铁律：
+    1. 真实优先：如果已有链接是合法的企业招聘官网（以 http 开头且非微信、非国聘检索、非占位符），100% 严格予以保留！绝不可替换为任何检索中转！
+    2. 知识库精准映射：若原链接为空或为无效占位符，或 portals_map 中有收录企业正统网申门户（如 *.zhiye.com, careers.*, job.*, campus.* 等），则优先匹配知识库中的官方直聘系统；
+    3. 铁律：绝对禁止生成任何第三方求职平台检索假链（严禁出现 iguopin、keyword 检索等中转链接）；
+    4. 若实在无官方直聘系统收录，则保留已有有效链接，或置为空让用户查阅官方公告，绝不输出虚假检索链接！
+    """
+    comp_raw = (company or "").strip()
+    clean_comp = re.sub(r'[\(（].*?[\)）]', '', comp_raw).strip().lower()
 
-        # 2. 若传入的原始链接存在且有效，经清洗后使用
-        if current_url and current_url.startswith("http") and not any(k in current_url for k in ["weixin.qq.com", "搜索官方", "ncss.cn"]):
-            safe_u = sanitize_url(current_url, company)
-            if safe_u and safe_u.startswith("http") and "ncss.cn" not in safe_u:
-                return safe_u
+    # 1. 检查已有链接是否已是真实官网系统
+    is_valid_existing = False
+    if current_url and current_url.startswith("http"):
+        if not any(bad in current_url.lower() for bad in ["iguopin", "weixin.qq.com", "sogou.com", "ncss.cn", "keyword=", "search?"]):
+            is_valid_existing = True
 
-        # 3. 兜底生成国聘专属精准聚合直搜入口
-        return get_fallback_portal(company)
-    except Exception:
-        import urllib.parse
-        clean_comp = re.sub(r'[\(（].*?[\)）]', '', (company or "")).strip()
-        return f"https://www.iguopin.com/job?keyword={urllib.parse.quote(clean_comp)}"
+    # 2. 尝试从权威官方直聘系统知识库中精准匹配
+    matched_portal = None
+    # 优先全字或去括号精准匹配
+    for k, v in portals_map.items():
+        if not v or "iguopin" in v.lower():
+            continue
+        k_clean = re.sub(r'[\(（].*?[\)）]', '', k).strip().lower()
+        if k_clean and (k_clean == clean_comp or k == comp_raw):
+            matched_portal = v
+            break
+
+    # 次优模糊包含匹配（要求关键词长度至少3个字，按长度降序避免子串先拦截）
+    if not matched_portal:
+        for k, v in sorted(portals_map.items(), key=lambda x: len(x[0]), reverse=True):
+            if not v or "iguopin" in v.lower():
+                continue
+            k_clean = re.sub(r'[\(（].*?[\)）]', '', k).strip().lower()
+            if len(k_clean) >= 3 and (k_clean in clean_comp or clean_comp in k_clean):
+                matched_portal = v
+                break
+
+    if matched_portal:
+        return matched_portal
+
+    if is_valid_existing:
+        return current_url
+
+    # 3. 绝不生成任何国聘或第三方检索假链！未匹配到的保持已有 url 或置空
+    return current_url if is_valid_existing else ""
 
 
 def infer_salary_and_scale(company, industry, positions, tags):

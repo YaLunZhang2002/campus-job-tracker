@@ -140,7 +140,7 @@ def run_multi_source_spider():
         
         cat = r.get("category", "")
         url = r.get("url", "")
-        clean_url = portals.get(comp, url) or f"https://www.iguopin.com/job?keyword={urllib.parse.quote(comp)}"
+        clean_url = portals.get(comp) or (url if (url and url.startswith("http") and not any(bad in url.lower() for bad in ["iguopin", "keyword=", "weixin.qq.com"])) else "")
         
         # 模块识别
         mod = "全品类头部大厂"
